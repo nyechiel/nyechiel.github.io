@@ -11,19 +11,7 @@ tags:
 - Overlay Networks
 - SDN
 - Talks
-meta:
-  publicize_google_plus_url: https://plus.google.com/+NirYechiel1/posts/1Ee94MWMsAZ
-  _rest_api_published: '1'
-  _rest_api_client_id: "-1"
-  _thumbnail_id: '80'
-  _publicize_job_id: '11756339302'
-  _publicize_done_7835650: '1'
-  _wpas_done_7830923: '1'
-  _edit_last: '30422920'
-  geo_public: '0'
-  _wpas_skip_7830926: '1'
-  _wpas_skip_7830923: '1'
-  _wpas_skip_7830917: '1'
+comments_id: 9
 permalink: "/2015/06/17/openstack-networking-with-neutron-what-plugin-should-i-deploy/"
 ---
 _(This is a summary version of a talk I gave at OpenStack Israel event on June 15th, 2015. Slides are available_ [_here_](https://github.com/nyechiel/presentation-slides/blob/master/20150629%20-%20Cloud%20Native%20Day%20Tel%20Aviv%20-%20OpenStack%20Networking%20with%20Neutron:%20What%20Plugin%20Should%20I%20Deploy.pdf)).

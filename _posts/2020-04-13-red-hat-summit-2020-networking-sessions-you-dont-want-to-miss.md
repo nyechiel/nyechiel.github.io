@@ -4,19 +4,14 @@ title: 'Red Hat Summit 2020: Networking Sessions You Don’t Want to Miss'
 date: 2020-04-13 11:14:46.000000000 +03:00
 categories:
 - Blog
-- SDN &amp; Open Networking
+- SDN and Open Networking
 - Talks
 tags:
 - COVID-19
 - Open Source
 - Red Hat
 - Red Hat Summit
-meta:
-  _rest_api_published: '1'
-  _rest_api_client_id: "-1"
-  _thumbnail_id: '456'
-  _publicize_job_id: '42969842041'
-  timeline_notification: '1586776488'
+comments_id: 23
 permalink: "/2020/04/13/red-hat-summit-2020-networking-sessions-you-dont-want-to-miss/"
 ---
 Red Hat Summit is one of my favorite events of the year. It brings together customers, partners, community members and Red Hatters to talk about the open source innovations that are enabling the future of enterprise technology. Seeing the number of attendees growing year after year is also impressive and reassuring, as more and more folks are showing interest in Red Hat and its growing portfolio of products.

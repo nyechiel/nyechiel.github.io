@@ -3,7 +3,7 @@ layout: post
 title: Networking sessions in Red Hat Summit 2016
 date: 2016-07-07 01:31:31.000000000 +03:00
 categories:
-- SDN &amp; Open Networking
+- SDN and Open Networking
 - Talks
 tags:
 - Ansible
@@ -15,11 +15,7 @@ tags:
 - RHEL
 - SDN
 - Virtualization
-meta:
-  _thumbnail_id: '396'
-  _rest_api_published: '1'
-  _rest_api_client_id: "-1"
-  _publicize_job_id: '24543067692'
+comments_id: 18
 permalink: "/2016/07/07/networking-sessions-in-red-hat-summit-2016/"
 ---
 I recently attended the Red Hat Summit 2016 event that took place at San Francisco, CA, on June 27-30. Red Hat Summit is a great place to interact with customers, partners, and product leads, and learn about Red Hat and the company's direction. While Red Hat is still mostly known for its Enterprise Linux (RHEL) business, it also offers products and solutions in the cloud computing, virtualization, middleware, storage, and systems management spaces. And networking is really a key piece in all of these.

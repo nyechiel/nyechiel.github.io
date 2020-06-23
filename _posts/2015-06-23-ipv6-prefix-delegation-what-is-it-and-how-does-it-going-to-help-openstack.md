@@ -4,19 +4,12 @@ title: IPv6 Prefix Delegation - what is it and how does it going to help OpenSta
 date: 2015-06-23 02:21:39.000000000 +03:00
 categories:
 - Blog
-- SDN &amp; Open Networking
+- SDN and Open Networking
 tags:
 - IPv6
 - Neutron
 - OpenStack
-meta:
-  _rest_api_published: '1'
-  _rest_api_client_id: "-1"
-  _publicize_job_id: '11940844474'
-  publicize_google_plus_url: https://plus.google.com/+NirYechiel1/posts/29v26nRgRid
-  _publicize_done_7835650: '1'
-  _wpas_done_7830923: '1'
-  _thumbnail_id: '85'
+comments_id: 10
 permalink: "/2015/06/23/ipv6-prefix-delegation-what-is-it-and-how-does-it-going-to-help-openstack/"
 ---
 IPv6 offers several ways to assign IP addresses to end hosts. Some of them (SLAAC, stateful DHCPv6, stateless DHCPv6) were already covered in [this post](/2014/07/02/ipv6-address-assignment-stateless-stateful-dhcp-oh-my/). The IPv6 Prefix Delegation mechanism (described in [RFC 3769](https://tools.ietf.org/html/rfc3769) and [RFC 3633](https://www.ietf.org/rfc/rfc3633.txt)) provides “a way of automatically configuring IPv6 prefixes and addresses on routers and hosts” - which sounds like yet another IP assignment option. How does it differ from the other methods? And why do we need it? Let’s try to figure it out.

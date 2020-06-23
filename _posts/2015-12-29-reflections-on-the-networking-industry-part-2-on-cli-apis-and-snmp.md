@@ -4,7 +4,7 @@ title: 'Reflections on the networking industry, part 2: On CLI, APIs and SNMP'
 date: 2015-12-29 19:10:15.000000000 +02:00
 categories:
 - Blog
-- SDN &amp; Open Networking
+- SDN and Open Networking
 tags:
 - API
 - Automation
@@ -14,14 +14,7 @@ tags:
 - REST
 - SNMP
 - Vendor
-meta:
-  _rest_api_published: '1'
-  _rest_api_client_id: "-1"
-  _thumbnail_id: '111'
-  _wpas_skip_7830917: '1'
-  _wpas_skip_7830923: '1'
-  _wpas_skip_7830926: '1'
-  _publicize_job_id: '18223085796'
+comments_id: 13
 permalink: "/2015/12/29/reflections-on-the-networking-industry-part-2-on-cli-apis-and-snmp/"
 ---
 In the [previous post](/2015/12/28/reflections-on-the-networking-industry-part-1/) I briefly described the fact that many networks today are closed and vertically designed. While standard protocols are being adopted by vendors, true interoperability is still a challenge. Sure, you can bring up a BGP peer between platforms from different vendors and exchange route information (otherwise we couldn’t scale the Internet), but management and configuration is still, in most cases, vendor specific.

@@ -11,19 +11,7 @@ tags:
 - SDN
 - Talks
 - VXLAN
-meta:
-  publicize_google_plus_url: https://plus.google.com/+NirYechiel1/posts/V2CgbdEW3Ug
-  _rest_api_published: '1'
-  _rest_api_client_id: "-1"
-  _thumbnail_id: '90'
-  _publicize_job_id: '12124518956'
-  _publicize_done_7835650: '1'
-  _wpas_done_7830923: '1'
-  _edit_last: '30422920'
-  _wpas_skip_7830917: '1'
-  geo_public: '0'
-  _wpas_skip_7830926: '1'
-  _wpas_skip_7830923: '1'
+comments_id: 11
 permalink: "/2015/06/28/neutron-networking-with-red-hat-enterprise-linux-openstack-platform/"
 ---
 _(This is a summary version of a talk I gave at_ [_Red Hat Summit_](http://www.redhat.com/summit/) _on June 25th, 2015. Slides are available_ [_here_](https://github.com/nyechiel/presentation-slides/blob/master/20150625%20-%20Red%20Hat%20Summit%202015%20-%20Neutron%20networking%20with%20Red%20Hat%20Enterprise%20Linux%20OpenStack%20Platform.pdf)).

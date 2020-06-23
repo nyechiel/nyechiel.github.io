@@ -5,12 +5,7 @@ date: 2019-04-23 10:04:42.000000000 +03:00
 categories:
 - Blog
 tags: []
-meta:
-  _thumbnail_id: '442'
-  _rest_api_published: '1'
-  _rest_api_client_id: "-1"
-  _publicize_job_id: '30062193920'
-  timeline_notification: '1556013883'
+comments_id: 21
 permalink: "/2019/04/23/a-new-beginning/"
 ---
 2019 brings a new beginning for me. After a little over five years at Red Hat, I have decided to move on to my next challenge. This is a big move, and I wanted to take a moment and reflect back on those years.

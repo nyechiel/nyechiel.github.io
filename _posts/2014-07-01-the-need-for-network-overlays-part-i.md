@@ -5,7 +5,7 @@ date: 2014-07-01 14:48:15.000000000 +03:00
 categories:
 - Blog
 - Foundations
-- SDN &amp; Open Networking
+- SDN and Open Networking
 tags:
 - Data Center
 - Network Virtualization

@@ -9,12 +9,7 @@ tags:
 - OpenShift
 - Red Hat
 - Submariner
-meta:
-  _rest_api_published: '1'
-  _rest_api_client_id: "-1"
-  _thumbnail_id: '452'
-  _publicize_job_id: '42935915786'
-  timeline_notification: '1586697897'
+comments_id: 22
 permalink: "/2020/04/12/hello-again-red-hat/"
 ---
 _tl;dr - as of February 2020, I am back at Red Hat, focusing on OpenShift multi-cluster networking_.
