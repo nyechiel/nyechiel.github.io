@@ -8,6 +8,7 @@ categories:
 - Hands On
 tags:
 - IPv6
+comments_id: 2
 permalink: "/2014/07/02/ipv6-address-assignment-stateless-stateful-dhcp-oh-my/"
 ---
 People don’t like changes. IPv6 could have help to solve a lot of the burden in networks deployed today, which are still mostly based on the original version of the Internet Protocol, aka version 4. But time has come, and even the old tricks like throwing network address translation (NAT) everywhere are not going to help anymore, simply because we are out of IP addresses. It may take some more time, and people will do everything they can to (continue and) delay it, but believe me – there is no other way around – IPv6 is here to replace IPv4. IPv6 is also a critical part of the promise of the cloud and the Internet of Things (IoT). If you want to connect everything to the network, you better plan for massive scale and have enough addresses to use.
