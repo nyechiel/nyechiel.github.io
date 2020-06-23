@@ -12,6 +12,7 @@ tags:
 - OpenStack
 - Overlay Networks
 - VXLAN
+comments_id: 1
 permalink: "/2014/07/01/the-need-for-network-overlays-part-i/"
 ---
 The IT industry has gained significant efficiency and flexibility as a direct result of virtualization. Organizations are moving toward a virtual datacenter model, and flexibility, speed, scale and automation are central to their success. While compute, memory resources and operating systems were successfully virtualized in the last decade, primarily due to the x86 server architecture, networks and network services have not kept pace.
