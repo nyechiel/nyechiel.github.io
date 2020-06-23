@@ -1,6 +1,6 @@
 <script src="  https://unpkg.com/showdown/dist/showdown.min.js"></script>
 <script>
-const GH_API_URL = 'https://api.github.com/repos/nyechiel/nyechiel.github.com/issues/{{ page.comments_id }}/comments';
+const GH_API_URL = 'https://api.github.com/repos/nyechiel/nyechiel.github.io/issues/{{ page.comments_id }}/comments';
 
 let request = new XMLHttpRequest();
 request.open( 'GET', GH_API_URL, true );
