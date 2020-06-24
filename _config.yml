@@ -22,14 +22,15 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 permalink: /:title/
 show_excerpts: true
 twitter_username: nyechiel
-github_username:  nyechiel
-linkedin_username:  nyechiel
+github_username: nyechiel
+linkedin_username: nyechiel
 
 # Build settings
 markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
