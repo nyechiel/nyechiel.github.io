@@ -19,13 +19,18 @@ email: n.yechiel@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Random thoughts on various aspects of computer networking.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: https://nyechiel.com # the base hostname & protocol for your site, e.g. http://example.com
 permalink: /:title/
 show_excerpts: true
 twitter_username: nyechiel
 github_username: nyechiel
 linkedin_username: nyechiel
-
+social:
+  name: Nir Yechiel
+  links:
+    - https://twitter.com/nyechiel
+    - https://www.linkedin.com/in/nyechiel
+    - https://github.com/nyechiel
 # Build settings
 markdown: kramdown
 theme: minima
