@@ -14,9 +14,10 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Nir Yechiel's Blog
-author: © 2020 Nir Yechiel
+author: Nir Yechiel
 email: n.yechiel@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
+  Random thoughts on various aspects of computer networking.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 permalink: /:title/
