@@ -1,6 +1,6 @@
 # nyechiel.github.io
 
-Source code for my personal static site: https://nyechiel.github.io/
+Source code for my personal static site: https://nyechiel.com
 
 
 ## Acknowledgments
