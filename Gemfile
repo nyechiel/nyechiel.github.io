@@ -22,7 +22,7 @@ group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.6"
   gem 'jekyll-seo-tag'
   gem "jekyll-mentions", "1.6.0"
-  gem "webrick", "~> 1.7"
+  gem "webrick", "~> 1.8"
   gem "kramdown-parser-gfm"
 end
 
