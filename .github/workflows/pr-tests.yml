@@ -1,0 +1,73 @@
+name: PR Tests
+
+on:
+  pull_request:
+    branches: [ master ]
+  push:
+    branches: [ master ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.1'  # Use Ruby 3.1 for better Jekyll compatibility
+        bundler-cache: true
+
+    - name: Install dependencies
+      run: bundle install
+
+    - name: Build Jekyll site
+      run: bundle exec jekyll build
+      env:
+        JEKYLL_ENV: production
+
+    - name: Test built site exists
+      run: |
+        if [ ! -d "_site" ]; then
+          echo "Error: _site directory not found"
+          exit 1
+        fi
+        echo "✅ Site built successfully"
+
+  markdown-lint:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Lint Markdown files
+      uses: nosborn/github-action-markdown-cli@v3.3.0
+      with:
+        files: .
+        config_file: .markdownlint.json
+        ignore_files: vendor/
+
+  security-scan:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.1'
+        bundler-cache: true
+
+    - name: Install bundler-audit
+      run: gem install bundler-audit
+
+    - name: Update advisory database
+      run: bundler-audit update
+
+    - name: Run bundle audit
+      run: bundler-audit check
