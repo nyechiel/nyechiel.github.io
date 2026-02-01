@@ -1,6 +1,24 @@
-<script src="  https://unpkg.com/showdown/dist/showdown.min.js"></script>
+<script src="https://unpkg.com/showdown@2.1.0/dist/showdown.min.js"
+        integrity="sha384-/J0KYnlNsAqPt9dCAUkxvc4j0pkLl6KTqRmH4mcOc1Y6CqCpbGMTXmnXDV9NgkaW"
+        crossorigin="anonymous"></script>
+<script src="https://unpkg.com/dompurify@3.0.6/dist/purify.min.js"
+        integrity="sha384-/6jxv8qRU6F5tL3SzpLkT7LXFdLb/iLqjQqCqJdLZ5jDXNzw7xPjC9U+QRZ9QQJ"
+        crossorigin="anonymous"></script>
 <script>
 const GH_API_URL = 'https://api.github.com/repos/nyechiel/nyechiel.github.io/issues/{{ page.comments_id }}/comments';
+
+// URL validation helper
+function isValidGitHubURL( url ) {
+	try {
+		const parsed = new URL( url );
+		return parsed.protocol === 'https:' &&
+		       (parsed.hostname === 'github.com' ||
+		        parsed.hostname === 'api.github.com' ||
+		        parsed.hostname === 'avatars.githubusercontent.com');
+	} catch {
+		return false;
+	}
+}
 
 let request = new XMLHttpRequest();
 request.open( 'GET', GH_API_URL, true );
@@ -22,33 +40,74 @@ request.onload = function() {
 
 function createCommentEl( response ) {
 	let user = document.createElement( 'a' );
-	user.setAttribute( 'href', response.user.url.replace( 'api.github.com/users', 'github.com' ) );
+	// Validate and construct GitHub profile URL safely
+	if ( response.user && response.user.login ) {
+		user.setAttribute( 'href', 'https://github.com/' + encodeURIComponent( response.user.login ) );
+	} else {
+		user.setAttribute( 'href', '#' );
+	}
 	user.classList.add( 'user' );
 
 	let userAvatar = document.createElement( 'img' );
 	userAvatar.classList.add( 'avatar' );
-	userAvatar.setAttribute( 'src', response.user.avatar_url );
+	// Validate avatar URL before setting
+	if ( response.user && response.user.avatar_url && isValidGitHubURL( response.user.avatar_url ) ) {
+		userAvatar.setAttribute( 'src', response.user.avatar_url );
+	} else {
+		userAvatar.setAttribute( 'src', '' );
+		userAvatar.setAttribute( 'alt', 'Avatar' );
+	}
 
 	user.appendChild( userAvatar );
 
 	let commentLink = document.createElement( 'a' );
-	commentLink.setAttribute( 'href', response.html_url );
+	// Validate comment URL
+	if ( response.html_url && isValidGitHubURL( response.html_url ) ) {
+		commentLink.setAttribute( 'href', response.html_url );
+	} else {
+		commentLink.setAttribute( 'href', '#' );
+	}
 	commentLink.classList.add( 'comment-url' );
-	commentLink.innerHTML = '#' + response.id + ' - ' + response.created_at;
+	// Use textContent instead of innerHTML for user data
+	commentLink.textContent = '#' + response.id + ' - ' + response.created_at;
 
 	let commentContents = document.createElement( 'div' );
 	commentContents.classList.add( 'comment-content' );
-	commentContents.innerHTML = response.body;
-	// Progressive enhancement.
-	if ( window.showdown ) {
-		let converter = new showdown.Converter();
-		commentContents.innerHTML = converter.makeHtml( response.body );
+
+	// Sanitize comment body before rendering
+	if ( response.body ) {
+		let sanitizedContent = response.body;
+
+		// Progressive enhancement with markdown conversion
+		if ( window.showdown && window.DOMPurify ) {
+			let converter = new showdown.Converter({
+				simplifiedAutoLink: true,
+				openLinksInNewWindow: true,
+				strikethrough: true,
+				tables: true
+			});
+			let html = converter.makeHtml( response.body );
+			// Sanitize the HTML output from markdown conversion
+			sanitizedContent = DOMPurify.sanitize( html, {
+				ALLOWED_TAGS: ['p', 'br', 'strong', 'em', 'u', 's', 'code', 'pre', 'a', 'ul', 'ol', 'li', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'blockquote', 'table', 'thead', 'tbody', 'tr', 'td', 'th'],
+				ALLOWED_ATTR: ['href', 'title', 'target', 'rel'],
+				ALLOW_DATA_ATTR: false
+			});
+			commentContents.innerHTML = sanitizedContent;
+		} else {
+			// Fallback: display as plain text
+			commentContents.textContent = sanitizedContent;
+		}
 	}
 
 	let comment = document.createElement( 'li' );
 	comment.setAttribute( 'data-created', response.created_at );
-	comment.setAttribute( 'data-author-avatar', response.user.avatar_url );
-	comment.setAttribute( 'data-user-url', response.user.url );
+	if ( response.user && response.user.avatar_url ) {
+		comment.setAttribute( 'data-author-avatar', response.user.avatar_url );
+	}
+	if ( response.user && response.user.url ) {
+		comment.setAttribute( 'data-user-url', response.user.url );
+	}
 
 	comment.appendChild( user );
 	comment.appendChild( commentContents );
