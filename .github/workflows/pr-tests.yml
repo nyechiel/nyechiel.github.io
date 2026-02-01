@@ -1,0 +1,109 @@
+name: PR Tests
+
+on:
+  pull_request:
+    branches: [ master ]
+  push:
+    branches: [ master ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.1'  # Use Ruby 3.1 for better Jekyll compatibility
+        bundler-cache: true
+
+    - name: Install dependencies
+      run: bundle install
+
+    - name: Build Jekyll site
+      run: bundle exec jekyll build
+      env:
+        JEKYLL_ENV: production
+
+    - name: Test built site exists
+      run: |
+        if [ ! -d "_site" ]; then
+          echo "Error: _site directory not found"
+          exit 1
+        fi
+        echo "✅ Site built successfully"
+
+    - name: Upload site artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: built-site
+        path: _site/
+        retention-days: 1
+
+  html-validation:
+    runs-on: ubuntu-latest
+    needs: build-and-test
+
+    steps:
+    - name: Download built site
+      uses: actions/download-artifact@v4
+      with:
+        name: built-site
+        path: _site/
+
+    - name: Validate HTML
+      uses: Cyb3r-Jak3/html5validator-action@v7.2.0
+      with:
+        root: _site/
+        css: true
+
+  link-checker:
+    runs-on: ubuntu-latest
+    needs: build-and-test
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Download built site
+      uses: actions/download-artifact@v4
+      with:
+        name: built-site
+        path: _site/
+
+    - name: Check links
+      uses: lycheeverse/lychee-action@v2
+      with:
+        args: --verbose --no-progress '_site/**/*.html'
+        fail: true
+      env:
+        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
+  markdown-lint:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Lint Markdown files
+      uses: nosborn/github-action-markdown-cli@v3.3.0
+      with:
+        files: .
+        config_file: .markdownlint.json
+        ignore_files: vendor/
+
+  security-scan:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Run bundle audit
+      uses: andrewmcodes/bundler-audit-action@main
+      with:
+        create_issue: false
