@@ -103,7 +103,17 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: Run bundle audit
-      uses: andrewmcodes/bundler-audit-action@main
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
       with:
-        create_issue: false
+        ruby-version: '3.1'
+        bundler-cache: true
+
+    - name: Install bundler-audit
+      run: gem install bundler-audit
+
+    - name: Update advisory database
+      run: bundle audit update
+
+    - name: Run bundle audit
+      run: bundle audit check
