@@ -8,7 +8,8 @@ tags:
 - COVID-19
 - Health
 comments_id: 24
-permalink: "/2020/05/24/thoughts-on-mental-health-project-aristotle-and-maslows-hierarchy-of-needs/"
+permalink: "/blog/2020/05/24/thoughts-on-mental-health-project-aristotle-and-maslows-hierarchy-of-needs/"
+redirect_from: "/2020/05/24/thoughts-on-mental-health-project-aristotle-and-maslows-hierarchy-of-needs/"
 ---
 At least up until today, I used this blog to document technical stuff. But with May being Mental Health Awareness month, and with many of us spending most of our days at home amid the spread of COVID-19, I’ve been thinking a lot about mental health recently. I wanted to put together some of my thoughts, even if somewhat random, here.
 

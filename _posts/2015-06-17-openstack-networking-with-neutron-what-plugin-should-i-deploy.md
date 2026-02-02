@@ -12,7 +12,8 @@ tags:
 - SDN
 - Talks
 comments_id: 9
-permalink: "/2015/06/17/openstack-networking-with-neutron-what-plugin-should-i-deploy/"
+permalink: "/blog/2015/06/17/openstack-networking-with-neutron-what-plugin-should-i-deploy/"
+redirect_from: "/2015/06/17/openstack-networking-with-neutron-what-plugin-should-i-deploy/"
 ---
 _(This is a summary version of a talk I gave at OpenStack Israel event on June 15th, 2015. Slides are available_ [_here_](https://github.com/nyechiel/presentation-slides/blob/master/20150629%20-%20Cloud%20Native%20Day%20Tel%20Aviv%20-%20OpenStack%20Networking%20with%20Neutron:%20What%20Plugin%20Should%20I%20Deploy.pdf)).
 

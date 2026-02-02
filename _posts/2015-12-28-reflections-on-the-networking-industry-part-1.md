@@ -12,7 +12,8 @@ tags:
 - Open Source
 - Vendor
 comments_id: 12
-permalink: "/2015/12/28/reflections-on-the-networking-industry-part-1/"
+permalink: "/blog/2015/12/28/reflections-on-the-networking-industry-part-1/"
+redirect_from: "/2015/12/28/reflections-on-the-networking-industry-part-1/"
 ---
 I have been involved with networking for quite some time now; I have had the opportunity to design, implement and operate different networks across different environments such as enterprise, data-center, and service provider - which inspired me to create this series of short blog posts exploring the computer networking industry. My view on the history, challenges, hype and reality, and most importantly - what’s next and how we can do better.
 

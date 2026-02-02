@@ -14,7 +14,8 @@ tags:
 - Overlay Networks
 - VXLAN
 comments_id: 4
-permalink: "/2014/11/30/the-need-for-network-overlays-part-ii/"
+permalink: "/blog/2014/11/30/the-need-for-network-overlays-part-ii/"
+redirect_from: "/2014/11/30/the-need-for-network-overlays-part-ii/"
 ---
 In the [previous post](/2014/07/01/the-need-for-network-overlays-part-i/), I covered some of the basic concepts behind network overlays, primarily highlighting the need to move into a more robust, L3 based, network environments. In this post I would like to cover network overlays in more detail, going over the different encapsulation options and highlighting some of the key points to consider when deploying an overlay-based solution.
 

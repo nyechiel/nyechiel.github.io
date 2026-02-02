@@ -16,7 +16,8 @@ tags:
 - SDN
 - Virtualization
 comments_id: 18
-permalink: "/2016/07/07/networking-sessions-in-red-hat-summit-2016/"
+permalink: "/blog/2016/07/07/networking-sessions-in-red-hat-summit-2016/"
+redirect_from: "/2016/07/07/networking-sessions-in-red-hat-summit-2016/"
 ---
 I recently attended the Red Hat Summit 2016 event that took place at San Francisco, CA, on June 27-30. Red Hat Summit is a great place to interact with customers, partners, and product leads, and learn about Red Hat and the company's direction. While Red Hat is still mostly known for its Enterprise Linux (RHEL) business, it also offers products and solutions in the cloud computing, virtualization, middleware, storage, and systems management spaces. And networking is really a key piece in all of these.
 

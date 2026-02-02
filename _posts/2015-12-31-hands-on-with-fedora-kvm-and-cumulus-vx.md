@@ -15,7 +15,8 @@ tags:
 - Open Source
 - Virtualization
 comments_id: 14
-permalink: "/2015/12/31/hands-on-with-fedora-kvm-and-cumulus-vx/"
+permalink: "/blog/2015/12/31/hands-on-with-fedora-kvm-and-cumulus-vx/"
+redirect_from: "/2015/12/31/hands-on-with-fedora-kvm-and-cumulus-vx/"
 ---
 [Cumulus Linux](https://cumulusnetworks.com/) is a network operating system based on Debian that runs on top of industry standard [networking hardware](https://cumulusnetworks.com/support/linux-hardware-compatibility-list/). By providing a software-only solution, Cumulus is enabling disaggregation of data center switches similar to the x86 server hardware/software disaggregation. In addition to the networking features you would expect from a network operating system like L2 bridging, Spanning Tree Protocol, LLDP, bonding/LAG, L3 routing, and so on, it enables users to take advantage of the latest Linux applications and automation tools, which is in my opinion its true power.
 

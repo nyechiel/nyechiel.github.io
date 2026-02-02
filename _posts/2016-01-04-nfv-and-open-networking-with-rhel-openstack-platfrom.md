@@ -11,7 +11,8 @@ tags:
 - OpenStack
 - Talks
 comments_id: 16
-permalink: "/2016/01/04/nfv-and-open-networking-with-rhel-openstack-platfrom/"
+permalink: "/blog/2016/01/04/nfv-and-open-networking-with-rhel-openstack-platfrom/"
+redirect_from: "/2016/01/04/nfv-and-open-networking-with-rhel-openstack-platfrom/"
 ---
 _(This is a summary version of a talk I gave at [Intel Israel Telecom and NFV event](http://www.telecomnews.co.il/%D7%A2%D7%AA%D7%99%D7%93-%D7%A2%D7%95%D7%9C%D7%9D-%D7%94%D7%A1%D7%9C%D7%95%D7%9C%D7%A8-%D7%9B%D7%A0%D7%A1-%D7%90%D7%99%D7%A0%D7%98%D7%9C-Intel-Israel-Telecom-NFV-event-2015.html) on December 2nd, 2015. Slides are available [here](https://github.com/nyechiel/presentation-slides/blob/master/20151202%20-%20Intel%20Israel%20Telecom%20Event%20-%20NFV%20and%20Open%20Networking.pdf)_).
 

@@ -12,7 +12,8 @@ tags:
 - OVS
 - SR-IOV
 comments_id: 17
-permalink: "/2016/02/14/boosting-the-nfv-datapath-with-rhel-openstack-platform/"
+permalink: "/blog/2016/02/14/boosting-the-nfv-datapath-with-rhel-openstack-platform/"
+redirect_from: "/2016/02/14/boosting-the-nfv-datapath-with-rhel-openstack-platform/"
 ---
 A post I wrote for the [Red Hat Stack](http://redhatstackblog.redhat.com/) blog, trying to clarify what we are doing with RHEL OpenStack Platform to accelerate the datapath for NFV applications.
 

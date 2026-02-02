@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-This blog is written and maintained by Nir Yechiel and was started to document thoughts on various topics and aspects of computer networking. The site is developed with Jekyll and hosted on GitHub Pages. Looking for slides from a talk I gave? Check [here](https://github.com/nyechiel/presentation-slides).
+This blog is written and maintained by Nir Yechiel. It started as a way to document thoughts on computer networking, but has grown to cover broader topics including product engineering and technology. The site is developed with Jekyll and hosted on GitHub Pages. Looking for slides from a talk I gave? Check [here](https://github.com/nyechiel/presentation-slides).
 
 ### Blog with Integrity
 I believe strongly in blogging with integrity. I have signed the [pledge](http://www.blogwithintegrity.com/), and stand behind everything it says.
