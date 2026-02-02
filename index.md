@@ -3,8 +3,6 @@ layout: page
 title: Home
 ---
 
-# Welcome
-
 Hi, I'm Nir Yechiel. I write about product engineering, technology, and people.
 
 ## Latest Posts
