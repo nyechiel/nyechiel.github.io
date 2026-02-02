@@ -15,7 +15,7 @@ redirect_from: "/2022/03/20/second-anniversary-at-red-hat/"
 Last month marked my second service anniversary since rejoining Red Hat. I feel like this is a good opportunity to reflect on the last two years and what I have been up to, both personally and professionally.
 
 
-### Recharge – or why I decided to rejoin Red Hat?
+## Recharge – or why I decided to rejoin Red Hat?
 When I left my job at Facebook I had no idea what I wanted to do next. I certainly did not plan to come back to Red Hat at that point. What I did know was that I needed a break. Like a real, proper break. This is when I decided to carefully plan a “funemployment” period with full support from my wife and family. After about 10 years in tech, with much international travel involved, this was very well-needed.
 
 During my recharge, which took around four months, I focused on myself and my family first. No laptop. Very little emails. Free schedule. That also allowed my wife, a full time employee in the tech industry herself, to develop her career and spend more time at work like she wanted to.   

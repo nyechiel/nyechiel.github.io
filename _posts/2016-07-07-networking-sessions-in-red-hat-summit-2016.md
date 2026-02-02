@@ -23,12 +23,12 @@ I recently attended the Red Hat Summit 2016 event that took place at San Francis
 
 In this short post I wanted to highlight a few sessions which are relevant to networking and were presented during the event. While video recordings are not available, slide decks can be downloaded in a PDF format (links included below).
 
-#### Software-defined networking (SDN) fundamentals for NFV, OpenStack, and containers
+## Software-defined networking (SDN) fundamentals for NFV, OpenStack, and containers
 - Session overview: With software-defined networking (SDN) gaining traction, administrators are faced with technologies that they need to integrate into their infrastructure. Red Hat Enterprise Linux offers a robust foundation for SDN implementations that are based on an open source standard technologies and designed for deploying containers, OpenStack, and network function virtualization (NFV). We'll dissect the technology stack involved in SDN and introduce the latest Red Hat Enterprise Linux options designed to address the packet processing requirements of virtual network functions (VNFs), such as Open vSwitch (OVS), single root I/O virtualization (SR-IOV), PCI Passthrough, and DPDK accelerated OVS.
 - [Slides](https://rh2016.smarteventscloud.com/connect/fileDownload/session/6E629B9CBED8910321AEDD4BA6F18430/SS43514_Yechiel-SS43514_%20SDN%20fundamentals%20for%20NFV,%20OpenStack,%20and%20containers%20[Red%20Hat%20Summit%202016].pdf)
 
 
-#### Use Linux on your whole rack with RDO and open networking
+### Use Linux on your whole rack with RDO and open networking
 - Session overview: OpenStack networking is never easy--each new release presents new challenges that are hard to keep up with. Come see how open networking using Linux can help simplify and standardize your RDO deployment. We will demonstrate spine/leaf topology basics, Layer-2 and Layer-3 trade-offs, and building your deployment in a virtual staging environment--all in Linux. Let us demystify your network.
 - [Slides](https://rh2016.smarteventscloud.com/connect/fileDownload/session/40012FDDA9D26F0B47B9D109F63126E3/ssuehle-summit2016.pdf)
 

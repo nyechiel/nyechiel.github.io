@@ -15,13 +15,13 @@ comments_id: 9
 permalink: "/blog/2015/06/17/openstack-networking-with-neutron-what-plugin-should-i-deploy/"
 redirect_from: "/2015/06/17/openstack-networking-with-neutron-what-plugin-should-i-deploy/"
 ---
-_(This is a summary version of a talk I gave at OpenStack Israel event on June 15th, 2015. Slides are available_ [_here_](https://github.com/nyechiel/presentation-slides/blob/master/20150629%20-%20Cloud%20Native%20Day%20Tel%20Aviv%20-%20OpenStack%20Networking%20with%20Neutron:%20What%20Plugin%20Should%20I%20Deploy.pdf)).
+_(This is a summary version of a talk I gave at OpenStack Israel event on June 15th, 2015. [Slides are available on GitHub](https://github.com/nyechiel/presentation-slides/blob/master/20150629%20-%20Cloud%20Native%20Day%20Tel%20Aviv%20-%20OpenStack%20Networking%20with%20Neutron:%20What%20Plugin%20Should%20I%20Deploy.pdf))._
 
 Neutron is probably one of the most pluggable projects in OpenStack today. The theory is very simple and goes like this: Neutron is providing just an API layer and you have got to choose the backend implementation you want. But in reality, there are plenty of plugins (or drivers) to choose from and the plugin architecture is not always so clear.
 
 The plugin is a critical piece of the deployment and directly affects the feature set you are going to get, as well as the scale, performance, high availability, and supported network topologies. In addition, different plugins offer different approaches for managing and operating the networks.
 
-### So what is a Neutron plugin?
+## So what is a Neutron plugin?
 
 The Neutron API exposed via the Neutron server is splitted into two buckets: the core (L2) API and the API extensions. While the core API consists only of the fundamental Neutron definitions (Network, Subnet, Port), the API extension is where the interesting stuff get to be defined, and where you can deal with constructs like L3 router, provider networks, or L4-L7 services such as FWaaS, LBaaS or VPNaaS.
 
@@ -37,7 +37,7 @@ With the hardware centric ones, the assumption is that a dedicated network hardw
 
 ### And what is there by default?
 
-There are efforts in the Neutron community to completely separate the API (or control-plane components) from the plugin or actual implementation. The vision is to position Neutron as a platform, and not as any specific implementation. That being said, Neutron was really developed out of the Open vSwitch plugin, and some good amount of the upstream development today is still focused around that. Open vSwitch (with the OVS ML2 driver) is what you get by default, and this is by far the most common plugin deployed in production (see the recent user survey [here](http://superuser.openstack.org/articles/openstack-users-share-how-their-deployments-stack-up)). This solution is not perfect and has pros and cons like any other of the solutions out there.
+There are efforts in the Neutron community to completely separate the API (or control-plane components) from the plugin or actual implementation. The vision is to position Neutron as a platform, and not as any specific implementation. That being said, Neutron was really developed out of the Open vSwitch plugin, and some good amount of the upstream development today is still focused around that. Open vSwitch (with the OVS ML2 driver) is what you get by default, and this is by far the most common plugin deployed in production (see the [recent user survey](http://superuser.openstack.org/articles/openstack-users-share-how-their-deployments-stack-up)). This solution is not perfect and has pros and cons like any other of the solutions out there.
 
 While Open vSwitch is used on the Compute nodes to provide connectivity for VM instances, some of the key components with this solution are actually not related to Open vSwitch. L3 routing, DHCP, and other services are implemented using dedicated software agents using Linux tools such as network namespaces (ip netns), dnsmasq, or iptables.
 

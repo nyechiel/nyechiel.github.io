@@ -13,5 +13,5 @@ comments_id: 8
 permalink: "/blog/2015/05/11/whats-coming-in-openstack-networking-for-the-kilo-release/"
 redirect_from: "/2015/05/11/whats-coming-in-openstack-networking-for-the-kilo-release/"
 ---
-A post I wrote for the Red Hat Stack blog on what’s coming in OpenStack Networking for the Kilo release. Check it out [here](https://www.redhat.com/en/blog/whats-coming-openstack-networking-kilo-release).
+A post I wrote for the Red Hat Stack blog on [what's coming in OpenStack Networking for the Kilo release](https://www.redhat.com/en/blog/whats-coming-openstack-networking-kilo-release).
 

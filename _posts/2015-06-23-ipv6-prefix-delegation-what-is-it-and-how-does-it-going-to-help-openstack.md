@@ -15,7 +15,7 @@ redirect_from: "/2015/06/23/ipv6-prefix-delegation-what-is-it-and-how-does-it-go
 ---
 IPv6 offers several ways to assign IP addresses to end hosts. Some of them (SLAAC, stateful DHCPv6, stateless DHCPv6) were already covered in [this post](/2014/07/02/ipv6-address-assignment-stateless-stateful-dhcp-oh-my/). The IPv6 Prefix Delegation mechanism (described in [RFC 3769](https://tools.ietf.org/html/rfc3769) and [RFC 3633](https://www.ietf.org/rfc/rfc3633.txt)) provides “a way of automatically configuring IPv6 prefixes and addresses on routers and hosts” - which sounds like yet another IP assignment option. How does it differ from the other methods? And why do we need it? Let’s try to figure it out.
 
-### Understanding the problem
+## Understanding the problem
 
 I know that you still find it hard to believe… but IPv6 is here, and with IPv6 there are enough addresses. That means that we can finally design our networks properly and avoid using different kinds of network address translation (NAT) in different places across the network. Clean IPv6 design will use addresses from the Global Unicast Address (GUA) range, which are routable in the public Internet. Since these are globally routed, care needs to be taken to ensure that prefixes configured by one customer do not overlap with prefixes chosen by another.
 

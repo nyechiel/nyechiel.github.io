@@ -18,7 +18,7 @@ One of the trickiest things with IPv6 though is the fact that it’s pretty diff
 
 In this post, I want to highlight the address assignment options available with IPv6, which is in my view one of the most fundamental things in IP networking, and where things are pretty different comparing to IPv4. I am going to assume you have some basic background on IPv6, and while I will cover the theory part I will also show the command line interface and demonstrate some of the configuration options, focusing on SLAAC and stateless DHCPv6. I am going to use a simple topology with two Cisco routers directly connected to each other using their GigabitEthernet 1/0 interface. Both routers are running IOS 15.2(4).
 
-### Let the party started
+## Let the party started
 
 With IPv6 an interface can have multiple prefixes and IP addresses, and unlike IPv4, all of them are primary. All interfaces will have a Link-Local address which is the address used to implement many of the control plane functions. If you don’t manually set the Link-Local address, one will automatically be generated for you. Note that the IPv6 protocol stack will not become operational on an interface until a Link-Local address was assigned or generated and it passed Duplicate Address Detection (DAD) verification. In Cisco IOS, we will first need to enable IPv6 on the router which is done globally using the _ipv6 unicast-routing_ command. We will then enable IPv6 on the interface using the _ipv6 enable_ command:
 

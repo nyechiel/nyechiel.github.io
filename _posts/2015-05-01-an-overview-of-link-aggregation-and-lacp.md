@@ -28,7 +28,7 @@ LAG can be configured as either static (manually) or dynamic by using a protocol
 
 ![LAG 1]({{ site.baseurl }}/assets/lag-blog-1.png)
 
-### Wait... LAG, bond, bundle, team, trunk, EtherChannel, Port Channel?
+## Wait... LAG, bond, bundle, team, trunk, EtherChannel, Port Channel?
 
 Let’s clear this right away - there are several acronyms used to describe LAG which are sometimes used interchangeably. While LAG is the standard name defined by the IEEE specification, different vendors and operating systems came up with their own implementation and terminology. Bond, for example, is really known on Linux-based systems, following the name of the [kernel driver](http://www.linuxfoundation.org/collaborate/workgroups/networking/bonding). Team (or NIC teaming) is also pretty common across [Windows](https://technet.microsoft.com/en-us/library/hh831648.aspx) systems, and lately [Linux](https://fedoraproject.org/wiki/Features/TeamDriver) systems as well. EtherChannel is one of the famous terms, being used on [Cisco’s IOS](http://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst3550/software/release/12-2_44_se/configuration/guide/3550SCG/swethchl.html). Interesting enough, Cisco have changed the term in their IOS-XR software to [bundles](http://www.cisco.com/c/en/us/td/docs/routers/crs/software/crs_r4-0/interfaces/configuration/guide/hc40crsbook/hc40lbun.pdf), and in their NX-OS systems to [Port Channels](http://www.cisco.com/c/en/us/td/docs/switches/datacenter/sw/5_x/nx-os/interfaces/configuration/guide/if_cli/if_portchannel.html). Oh... I love the standardization out there!
 
