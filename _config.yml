@@ -43,6 +43,11 @@ plugins:
   - jekyll-seo-tag
   - jekyll-redirect-from
 
+# Feed configuration
+feed:
+  posts_limit: 50
+  excerpt_only: false
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
