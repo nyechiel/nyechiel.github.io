@@ -10,7 +10,8 @@ tags:
 - Red Hat
 - Submariner
 comments_id: 22
-permalink: "/2020/04/12/hello-again-red-hat/"
+permalink: "/blog/2020/04/12/hello-again-red-hat/"
+redirect_from: "/2020/04/12/hello-again-red-hat/"
 ---
 _tl;dr - as of February 2020, I am back at Red Hat, focusing on OpenShift multi-cluster networking_.
 

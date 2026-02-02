@@ -6,6 +6,9 @@ gem "logger"
 gem "base64"
 gem "bigdecimal"
 
+# Constrain public_suffix for Ruby 3.1 compatibility (CI uses Ruby 3.1)
+gem "public_suffix", "< 7.0"
+
 # Hello! This is where you manage which Jekyll version is used to run.
 # When you want to use a different version, change it below, save the
 # file and run `bundle install`. Run Jekyll with `bundle exec`, like so:
@@ -27,6 +30,7 @@ gem "minima", "~> 2.0"
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.17"
   gem 'jekyll-seo-tag', "~> 2.8"
+  gem "jekyll-redirect-from", "~> 0.16"
   gem "webrick", "~> 1.8"
   gem "kramdown-parser-gfm", "~> 1.1"
 end

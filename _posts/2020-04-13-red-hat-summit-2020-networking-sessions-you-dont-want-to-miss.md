@@ -12,7 +12,8 @@ tags:
 - Red Hat
 - Red Hat Summit
 comments_id: 23
-permalink: "/2020/04/13/red-hat-summit-2020-networking-sessions-you-dont-want-to-miss/"
+permalink: "/blog/2020/04/13/red-hat-summit-2020-networking-sessions-you-dont-want-to-miss/"
+redirect_from: "/2020/04/13/red-hat-summit-2020-networking-sessions-you-dont-want-to-miss/"
 ---
 Red Hat Summit is one of my favorite events of the year. It brings together customers, partners, community members and Red Hatters to talk about the open source innovations that are enabling the future of enterprise technology. Seeing the number of attendees growing year after year is also impressive and reassuring, as more and more folks are showing interest in Red Hat and its growing portfolio of products.
 

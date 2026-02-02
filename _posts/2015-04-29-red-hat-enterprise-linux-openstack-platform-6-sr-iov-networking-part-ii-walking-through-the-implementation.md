@@ -12,6 +12,7 @@ tags:
 - OpenStack
 - SR-IOV
 comments_id: 6
-permalink: "/2015/04/29/red-hat-enterprise-linux-openstack-platform-6-sr-iov-networking-part-ii-walking-through-the-implementation/"
+permalink: "/blog/2015/04/29/red-hat-enterprise-linux-openstack-platform-6-sr-iov-networking-part-ii-walking-through-the-implementation/"
+redirect_from: "/2015/04/29/red-hat-enterprise-linux-openstack-platform-6-sr-iov-networking-part-ii-walking-through-the-implementation/"
 ---
 [Second part of the SR-IOV networking post](https://www.redhat.com/en/blog/red-hat-enterprise-linux-openstack-platform-6-sr-iov-networking-part-ii-walking-through-implementation) I wrote for the Red Hat Stack blog.

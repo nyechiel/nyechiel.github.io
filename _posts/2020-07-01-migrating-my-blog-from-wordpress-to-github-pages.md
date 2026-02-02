@@ -7,7 +7,8 @@ categories:
 tags:
 - GitHub Pages
 comments_id: 25
-permalink: "/2020/07/01/migrating-my-blog-from-wordpress-to-github-pages/"
+permalink: "/blog/2020/07/01/migrating-my-blog-from-wordpress-to-github-pages/"
+redirect_from: "/2020/07/01/migrating-my-blog-from-wordpress-to-github-pages/"
 ---
 
 Goodbye The Network Way, welcome [nyechiel.com](https://nyechiel.com/)!

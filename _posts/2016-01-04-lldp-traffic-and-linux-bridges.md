@@ -12,7 +12,8 @@ tags:
 - LLDP
 - Virtualization
 comments_id: 15
-permalink: "/2016/01/04/lldp-traffic-and-linux-bridges/"
+permalink: "/blog/2016/01/04/lldp-traffic-and-linux-bridges/"
+redirect_from: "/2016/01/04/lldp-traffic-and-linux-bridges/"
 ---
 In my [previous post](/2015/12/31/hands-on-with-fedora-kvm-and-cumulus-vx/) I described my Cumulus VX lab environment which is based on Fedora and KVM. One of the first things I noticed after bringing up the setup is that although I have got L3 connectivity between the emulated Cumulus switches, I can’t get [LLDP](http://www.ieee802.org/1/pages/802.1ab.html) to operate properly between the devices. 
 

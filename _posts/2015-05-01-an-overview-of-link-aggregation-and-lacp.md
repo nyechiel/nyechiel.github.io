@@ -12,7 +12,8 @@ tags:
 - LAG
 - Network Virtualization
 comments_id: 7
-permalink: "/2015/05/01/an-overview-of-link-aggregation-and-lacp/"
+permalink: "/blog/2015/05/01/an-overview-of-link-aggregation-and-lacp/"
+redirect_from: "/2015/05/01/an-overview-of-link-aggregation-and-lacp/"
 ---
 The concept of Link Aggregation (LAG) is well known in the networking industry by now, and people usually consider it as a basic functionality that just works out of the box. With all of the SDN hype that’s going on out there, I sometimes feel that we tend to neglect some of the more “traditional” stuff like this one. As with many networking technologies and protocols, things may not just work out of the box, and it’s important to master the details to be able to design things properly, know what to expect to (i.e., what the normal behavior is) and ultimately being able to troubleshoot in case of a problem.
 
