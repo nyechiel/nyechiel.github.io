@@ -15,7 +15,7 @@ comments_id: 11
 permalink: "/blog/2015/06/28/neutron-networking-with-red-hat-enterprise-linux-openstack-platform/"
 redirect_from: "/2015/06/28/neutron-networking-with-red-hat-enterprise-linux-openstack-platform/"
 ---
-_(This is a summary version of a talk I gave at_ [_Red Hat Summit_](http://www.redhat.com/summit/) _on June 25th, 2015. Slides are available_ [_here_](https://github.com/nyechiel/presentation-slides/blob/master/20150625%20-%20Red%20Hat%20Summit%202015%20-%20Neutron%20networking%20with%20Red%20Hat%20Enterprise%20Linux%20OpenStack%20Platform.pdf)).
+_(This is a summary version of a talk I gave at_ [_Red Hat Summit_](http://www.redhat.com/summit/) _on June 25th, 2015. [Slides are available on GitHub](https://github.com/nyechiel/presentation-slides/blob/master/20150625%20-%20Red%20Hat%20Summit%202015%20-%20Neutron%20networking%20with%20Red%20Hat%20Enterprise%20Linux%20OpenStack%20Platform.pdf))._
 
 I was honored to speak the second time in a row on Red Hat Summit, the premier open source technology event hosted in Boston this year. As I am now focusing on product management for networking in [Red Hat Enterprise Linux OpenStack Platform](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux_OpenStack_Platform/) I presented Red Hat’s approach to Neutron, the OpenStack networking service.
 

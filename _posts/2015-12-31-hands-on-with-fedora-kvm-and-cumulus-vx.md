@@ -26,7 +26,7 @@ My goal is to build a four node leaf/spine topology. To form the fabric, each le
 
 ![base_topology]({{ site.baseurl }}/assets/base_topology1.png)
 
-### Prerequisites
+## Prerequisites
 
 - Install KVM and related virtualization packages. I am running Fedora 22 and used ```yum groupinstall "Virtualization\*"``` to obtain the latest versions of libvirt, virt-manager, qemu-kvm and associated dependencies.
 
@@ -107,19 +107,21 @@ Before we log in to any of the newly created VMs, I first would like to verify t
 Useful commands to use here are **brctl show** and **brctl showmacs**. For example, let’s examine the link between leaf1 and spine3 (note that libvirt based the MAC on the configured guest MAC address with high byte set to 0xFE):
 
 > ```
-> $ ip link show vnet1 | grep link link/ether fe:00:01:00:00:13 brd ff:ff:ff:ff:ff:ff
+> $ ip link show vnet1 | grep link
+> link/ether fe:00:01:00:00:13 brd ff:ff:ff:ff:ff:ff
 > ```
 > 
 > ```
-> $ ip link show vnet10 | grep link link/ether fe:00:03:00:00:31 brd ff:ff:ff:ff:ff:ff
+> $ ip link show vnet10 | grep link
+> link/ether fe:00:03:00:00:31 brd ff:ff:ff:ff:ff:ff
 > ```
 
 > ```
-> $ brctl show virbr1
+> brctl show virbr1
 > ```
 
 > ```
-> $ brctl showmacs virbr1
+> brctl showmacs virbr1
 > ```
  
 

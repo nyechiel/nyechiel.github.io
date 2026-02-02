@@ -19,7 +19,7 @@ redirect_from: "/2014/11/30/the-need-for-network-overlays-part-ii/"
 ---
 In the [previous post](/2014/07/01/the-need-for-network-overlays-part-i/), I covered some of the basic concepts behind network overlays, primarily highlighting the need to move into a more robust, L3 based, network environments. In this post I would like to cover network overlays in more detail, going over the different encapsulation options and highlighting some of the key points to consider when deploying an overlay-based solution.
 
-### Underlying fabric considerations
+## Underlying fabric considerations
 
 While network overlays give you the impression that networks are suddenly all virtualized, we still need to consider the physical underlying network. No matter what overlay solution you might pick, it’s still going to be the job of the underlying transport network to switch or route the traffic from source to destination (and vice versa).
 

@@ -18,7 +18,7 @@ redirect_from: "/2014/07/01/the-need-for-network-overlays-part-i/"
 ---
 The IT industry has gained significant efficiency and flexibility as a direct result of virtualization. Organizations are moving toward a virtual datacenter model, and flexibility, speed, scale and automation are central to their success. While compute, memory resources and operating systems were successfully virtualized in the last decade, primarily due to the x86 server architecture, networks and network services have not kept pace.
 
-### The traditional solution: VLANs
+## The traditional solution: VLANs
 
 Way before the era of server virtualization, Virtual LANs (or 802.1q VLANs) were used to partition different logical networks (or broadcast domains) over the same physical fabric. Instead of wiring a separate physical infrastructure for each group, VLANs were used efficiently to isolate the traffic from different groups or applications based on the business needs, with a unique identifier allocated to each logical network. For years, a physical server represented one end-point from the network perspective and was attached to an “access” (i.e., untagged) port in the network switch. The access switch was responsible to enforce the VLAN ID as well as other security and network settings (e.g., quality of service). The VLAN ID is a 12-bit field allowing a theoretical limit of 4096 unique logical networks. In practice though, most switch vendors support much lower number to be configured. You should remember that for each active VLAN in a switch, a VLAN database need to be maintained for proper mapping of the physical interfaces and the MAC addresses associated with the VLAN. Furthermore, some vendors would also create a different spanning-tree (STP) instance for each active VLAN on the switch which require additional memory cycles.
 
@@ -27,7 +27,7 @@ VLANs are a perfect solution for small-scale environments, where the number of e
 In a virtualized world, where the number of end-points is constantly increasing and can be very high, VLANs is a limited solution that does not follow one of the main participles beyond virtualization: use of software application to divide one physical resource into multiple isolated virtual environments. Yes, VLANs does offer segmentation of different logical networks (or broadcast domains) over the same physical fabric, but you still need to manually provision the network and make sure the VLANs are properly configured across the network devices. This start to become a management and configuration nightmare and simply does not scale.
 
 
-### Where network vendors started to be (really) creative
+## Where network vendors started to be (really) creative
 
 At this point, when there was no doubt that VLANs and traditional L2 based networks are not suitable for large virtualized environments, plenty of network solutions were raised. I don’t really want to go into detail on any of those, but you can look for 802.1Qbg, VM-FEX, FabricPath, TRILL, 802.1ad (QinQ), and 802.1ah (PBB) to name a few. In my view, these are over complicating the network while ignoring the main problem – L2-based solution is a bad thing to begin with, and we should have looked for something completely different (hint: L3 routing is your friend).
 

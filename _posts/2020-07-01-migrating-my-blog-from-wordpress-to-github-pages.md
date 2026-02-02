@@ -17,7 +17,7 @@ When I started my blog a few years back I made the decision to use WordPress.com
 
 After looking at some of the alternatives I decided upon using [GitHub Pages](https://pages.github.com/) to host my blog, and use [Jekyll](https://jekyllrb.com/), a static site generator which has built-in support for GitHub Pages. My new site is now available at nyechiel.com, which you obviously know if you read this post. I migrated all of the content and old posts from the WordPress site into this new blog, and I decided to completely delete my WordPress site and account. 
 
-The source code for this website is open and can be found [here](https://github.com/nyechiel/nyechiel.github.io). Feel free to take a look if you want to learn how I use Jekyll and what customization I made to make the site works for me. 
+The [source code for this website is available on GitHub](https://github.com/nyechiel/nyechiel.github.io). Feel free to take a look if you want to learn how I use Jekyll and what customization I made to make the site works for me. 
 
 Happy blogging, and of course stay safe!
 
