@@ -30,7 +30,14 @@ sitemap:
     {% endunless %}
   {% endfor %}
   {% for page in site.pages %}
-    {% unless page.sitemap.exclude == "yes" or page.name == "feed.xml" %}
+    {% assign is_redirect = false %}
+    {% if page.url contains "/20" and page.url contains "/" %}
+      {% assign url_parts = page.url | split: "/" %}
+      {% if url_parts[1] contains "20" and url_parts[1] != "blog" %}
+        {% assign is_redirect = true %}
+      {% endif %}
+    {% endif %}
+    {% unless page.sitemap.exclude == "yes" or page.name == "feed.xml" or is_redirect %}
     <url>
       <loc>{{ site.url }}{{ page.url | remove: "index.html" }}</loc>
       {% if page.sitemap.lastmod %}
