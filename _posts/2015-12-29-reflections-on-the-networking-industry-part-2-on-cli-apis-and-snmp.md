@@ -18,7 +18,7 @@ comments_id: 13
 permalink: "/blog/2015/12/29/reflections-on-the-networking-industry-part-2-on-cli-apis-and-snmp/"
 redirect_from: "/2015/12/29/reflections-on-the-networking-industry-part-2-on-cli-apis-and-snmp/"
 ---
-In the [previous post](/2015/12/28/reflections-on-the-networking-industry-part-1/) I briefly described the fact that many networks today are closed and vertically designed. While standard protocols are being adopted by vendors, true interoperability is still a challenge. Sure, you can bring up a BGP peer between platforms from different vendors and exchange route information (otherwise we couldn’t scale the Internet), but management and configuration is still, in most cases, vendor specific.
+In the [previous post](/blog/2015/12/28/reflections-on-the-networking-industry-part-1/) I briefly described the fact that many networks today are closed and vertically designed. While standard protocols are being adopted by vendors, true interoperability is still a challenge. Sure, you can bring up a BGP peer between platforms from different vendors and exchange route information (otherwise we couldn’t scale the Internet), but management and configuration is still, in most cases, vendor specific.
 
 Every network engineer out there got to respect the [CLI](https://en.wikipedia.org/wiki/Command-line_interface). We sometimes love them and sometimes hate them, but we all tend to master them. The glorious way of interacting with a network device, even in 2015. Some common properties of CLIs are:
 

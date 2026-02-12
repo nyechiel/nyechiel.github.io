@@ -15,7 +15,7 @@ redirect_from: "/2020/04/12/hello-again-red-hat/"
 ---
 _tl;dr - as of February 2020, I am back at Red Hat, focusing on OpenShift multi-cluster networking_.
 
-2020 brings a new beginning for me. Last year I [decided to join the Connectivity team at Facebook](/2019/04/23/a-new-beginning/). Working at Facebook was a great experience for me, but after a few months there I realized that I was not happy and this is not going to be a long-term fit for me. In August, I made the decision to quit and go and spend some well-needed time with my family. I was happily funemployed for around 4 months, and it was just awesome!
+2020 brings a new beginning for me. Last year I [decided to join the Connectivity team at Facebook](/blog/2019/04/23/a-new-beginning/). Working at Facebook was a great experience for me, but after a few months there I realized that I was not happy and this is not going to be a long-term fit for me. In August, I made the decision to quit and go and spend some well-needed time with my family. I was happily funemployed for around 4 months, and it was just awesome!
 
 Starting with February 2020, I am back at Red Hat, supporting the OpenShift multi-cluster network engineering team. Transitioning from Product Management to engineering (and engineering management in particular) is new to me, but I enjoy every second of it so far.
 

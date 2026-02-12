@@ -37,7 +37,7 @@ sitemap:
         {% assign is_redirect = true %}
       {% endif %}
     {% endif %}
-    {% unless page.sitemap.exclude == "yes" or page.name == "feed.xml" or is_redirect %}
+    {% unless page.sitemap.exclude == "yes" or page.url == "/feed.xml" or page.url == "/404/" or page.url == "/redirects.json" or page.url contains "/assets/" or is_redirect %}
     <url>
       <loc>{{ site.url }}{{ page.url | remove: "index.html" }}</loc>
       {% if page.sitemap.lastmod %}
