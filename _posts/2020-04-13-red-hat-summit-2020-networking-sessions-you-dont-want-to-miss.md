@@ -21,7 +21,7 @@ This year, due to the evolving coronavirus (COVID-19) developments, we decided t
 
 The Red Hat Summit team is doing an INCREDIBLE job recreating the same content you would expect, with keynotes, breakout sessions, access to Red Hat experts, and even "booth" areas. In addition, all recorded content will be available for up to one year after the event. And the cherry on top, [access and registration](https://reg.summit.redhat.com/account/login?signin=19076843019aeedb970452cd57aac578) is free of charge and the event is [designed for a global audience across three main time-zones](https://www.redhat.com/en/summit/agenda/agenda-at-a-glance): North America and Latin America (NA + LATAM); Europe, the Middle East, and Africa (EMEA); and Asia and the Pacific Rim (APAC).
 
-Similar to a [post I did back in 2016](https://thenetworkway.wordpress.com/2016/07/07/networking-sessions-in-red-hat-summit-2016/), I would like to highlight key networking related sessions that are planned this time. Just click the links for more information:
+Similar to a [post I did back in 2016](/blog/2016/07/07/networking-sessions-in-red-hat-summit-2016/), I would like to highlight key networking related sessions that are planned this time. Just click the links for more information:
 
 - [Red Hat Ansible Network Automation + Telco—containerized network function virtualization (NFV)](https://summit.redhat.com/conference/sessions/details/89ffd14b-2c99-4869-92d6-a23d8f8f309e?sb=false)
 - [Red Hat Enterprise Linux networking roadmap: Connecting workloads of tomorrow](https://summit.redhat.com/conference/sessions/details/9fbbc0df-5556-48db-9d81-4ec1374c51ed?sb=false)
