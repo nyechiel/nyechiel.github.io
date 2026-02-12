@@ -36,6 +36,16 @@ jobs:
         fi
         echo "✅ Site built successfully"
 
+    - name: Install html-proofer
+      run: gem install html-proofer
+
+    - name: Check links
+      run: |
+        htmlproofer _site \
+          --disable-external \
+          --ignore-urls "/^\/2[0-9]{3}\//,/^https:\/\/nyechiel\.com\/2[0-9]{3}\//,/fontawesome/" \
+          --no-enforce-https
+
   markdown-lint:
     runs-on: ubuntu-latest
 
