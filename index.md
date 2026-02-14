@@ -12,6 +12,10 @@ Check out my [blog](/blog/) for thoughts on product engineering, technology, peo
 
 [View All Posts →](/blog/)
 
+## Podcasts
+
+Check out [podcast episodes](/podcasts/) I have been featured in.
+
 ## About
 
 Learn more [about me](/about/) and this site.

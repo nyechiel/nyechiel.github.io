@@ -25,6 +25,7 @@ show_excerpts: true
 header_pages:
   - index.md
   - blog/index.md
+  - podcasts.md
   - about.md
 twitter_username: nyechiel
 github_username: nyechiel
