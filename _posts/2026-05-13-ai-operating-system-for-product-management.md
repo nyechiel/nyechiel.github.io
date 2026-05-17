@@ -12,7 +12,7 @@ tags:
 - Red Hat
 comments_id: 70
 ---
-I'm a product manager at Red Hat, working on AI-powered tools for the enterprise. I recently moved back into PM after six years in engineering leadership - a transition that probably deserves its own post someday.
+I recently moved back into PM after more than six years in engineering leadership - a transition that probably deserves its own post someday. I currently work as a Senior Principal Product Manager at Red Hat with a strong technical focus, building agentic AI systems that transform how teams across the business work.
 
 But this post is about something else. Over the past few weeks I've been building a personal AI system that handles the operational side of my job. This space is evolving fast, and what I describe here will probably look different in a few months, but I wanted to capture where I am in this journey and share what's working.
 
