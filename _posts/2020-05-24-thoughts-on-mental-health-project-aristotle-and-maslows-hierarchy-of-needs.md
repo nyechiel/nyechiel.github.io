@@ -6,7 +6,8 @@ categories:
 - Blog
 tags:
 - COVID-19
-- Health
+- Management
+- People
 comments_id: 24
 permalink: "/blog/2020/05/24/thoughts-on-mental-health-project-aristotle-and-maslows-hierarchy-of-needs/"
 redirect_from: "/2020/05/24/thoughts-on-mental-health-project-aristotle-and-maslows-hierarchy-of-needs/"

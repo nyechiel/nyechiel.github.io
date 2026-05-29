@@ -4,7 +4,10 @@ title: A New Beginning
 date: 2019-04-23 10:04:42.000000000 +03:00
 categories:
 - Blog
-tags: []
+tags:
+- Red Hat
+- Career
+- Product Management
 comments_id: 21
 permalink: "/blog/2019/04/23/a-new-beginning/"
 redirect_from: "/2019/04/23/a-new-beginning/"

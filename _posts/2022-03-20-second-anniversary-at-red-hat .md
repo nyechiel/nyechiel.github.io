@@ -5,9 +5,11 @@ date: 2022-03-20 12:29:20.000000000 +03:00
 categories:
 - Blog
 tags:
+- Career
 - Kubernetes
-- Red Hat
 - Management
+- OpenShift
+- Red Hat
 comments_id: 27
 permalink: "/blog/2022/03/20/second-anniversary-at-red-hat/"
 redirect_from: "/2022/03/20/second-anniversary-at-red-hat/"

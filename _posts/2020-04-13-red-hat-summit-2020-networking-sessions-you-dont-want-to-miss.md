@@ -11,6 +11,7 @@ tags:
 - Open Source
 - Red Hat
 - Red Hat Summit
+- Talks
 comments_id: 23
 permalink: "/blog/2020/04/13/red-hat-summit-2020-networking-sessions-you-dont-want-to-miss/"
 redirect_from: "/2020/04/13/red-hat-summit-2020-networking-sessions-you-dont-want-to-miss/"

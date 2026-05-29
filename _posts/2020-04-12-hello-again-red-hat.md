@@ -5,7 +5,9 @@ date: 2020-04-12 13:24:56.000000000 +03:00
 categories:
 - Blog
 tags:
+- Career
 - Kubernetes
+- Management
 - OpenShift
 - Red Hat
 - Submariner

@@ -5,6 +5,7 @@ date: 2014-09-16 21:01:29.000000000 +03:00
 categories:
 - Blog
 tags:
+- Neutron
 - OpenStack
 comments_id: 3
 permalink: "/blog/2014/09/16/whats-coming-in-openstack-networking-for-juno-release/"

@@ -7,13 +7,13 @@ categories:
 - Talks
 tags:
 - Ansible
-- Cisco
 - Linux
 - NFV
 - OpenStack
 - Red Hat
-- RHEL
+- Red Hat Summit
 - SDN
+- Talks
 - Virtualization
 comments_id: 18
 permalink: "/blog/2016/07/07/networking-sessions-in-red-hat-summit-2016/"

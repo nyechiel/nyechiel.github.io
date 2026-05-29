@@ -6,6 +6,7 @@ categories:
 - Blog
 tags:
 - GitHub Pages
+- Jekyll
 comments_id: 25
 permalink: "/blog/2020/07/01/migrating-my-blog-from-wordpress-to-github-pages/"
 redirect_from: "/2020/07/01/migrating-my-blog-from-wordpress-to-github-pages/"
