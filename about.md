@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-Hi, I'm Nir Yechiel. I'm a product manager at [Red Hat](https://www.redhat.com/), focused on the intersection of AI and enterprise software.
+I'm a product manager at [Red Hat](https://www.redhat.com/), focused on the intersection of AI and enterprise software.
 
 I started my career in computer networking, designing and operating networks across enterprise, data center, and service provider environments. That hands-on background led me to product management, where I spent several years bringing open source infrastructure products to market - first Red Hat Virtualization, then OpenStack networking, and later OpenShift. Along the way I worked closely with upstream communities including oVirt, OpenStack, Kubernetes, Open vSwitch, OpenDaylight, OPNFV, and others.
 
