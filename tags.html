@@ -1,0 +1,86 @@
+---
+layout: page
+title: Tags
+permalink: /tags/
+---
+
+<div class="tags-page">
+  {%- assign sorted_tags = site.tags | sort -%}
+  <div class="tags-cloud">
+    <a class="post-tag post-tag--link post-tag--all" href="#" data-show-all>All</a>
+    {%- for tag in sorted_tags -%}
+      <a class="post-tag post-tag--link" href="#{{ tag[0] | slugify }}">{{ tag[0] | escape }} <span class="tag-count">{{ tag[1].size }}</span></a>
+    {%- endfor -%}
+  </div>
+
+  {%- for tag in sorted_tags -%}
+    <div class="tag-group" id="{{ tag[0] | slugify }}">
+      <h2 class="tag-group-heading">{{ tag[0] | escape }}</h2>
+      <ul class="post-list">
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        {%- for post in tag[1] -%}
+          <li>
+            <span class="post-meta">{{ post.date | date: date_format }}</span>
+            <h3>
+              <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+            </h3>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+  {%- endfor -%}
+</div>
+
+<script>
+(function() {
+  var groups = document.querySelectorAll('.tag-group');
+  var pills = document.querySelectorAll('.tags-cloud .post-tag--link');
+  var allBtn = document.querySelector('[data-show-all]');
+
+  function filterByHash() {
+    var hash = window.location.hash.slice(1);
+    if (!hash) {
+      showAll();
+      return;
+    }
+    var found = false;
+    groups.forEach(function(g) {
+      if (g.id === hash) {
+        g.style.display = '';
+        found = true;
+      } else {
+        g.style.display = 'none';
+      }
+    });
+    if (!found) {
+      showAll();
+      return;
+    }
+    pills.forEach(function(p) {
+      if (p.getAttribute('href') === '#' + hash) {
+        p.classList.add('post-tag--active');
+      } else {
+        p.classList.remove('post-tag--active');
+      }
+    });
+    if (allBtn) allBtn.classList.remove('post-tag--active');
+  }
+
+  function showAll() {
+    groups.forEach(function(g) { g.style.display = ''; });
+    pills.forEach(function(p) { p.classList.remove('post-tag--active'); });
+    if (allBtn) allBtn.classList.add('post-tag--active');
+  }
+
+  if (allBtn) {
+    allBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      history.replaceState(null, '', window.location.pathname);
+      showAll();
+    });
+  }
+
+  window.addEventListener('hashchange', filterByHash);
+  filterByHash();
+})();
+</script>
