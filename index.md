@@ -4,7 +4,9 @@ title: Home
 description: "Nir Yechiel's personal website — writing about product engineering, technology, and people."
 ---
 
-Hi, I'm Nir Yechiel. I write about product engineering, technology, and people.
+Hi, I'm Nir Yechiel.
+
+Currently a Product Manager at Red Hat, working on AI-powered systems for the enterprise. Previously led engineering teams on OpenShift Networking (Submariner, Service Mesh, Ingress/DNS, Gateway API, Service Interconnect) and held various Engineering and Product roles across Red Hat, Facebook (Meta), and Cisco.
 
 ## Latest Posts
 
