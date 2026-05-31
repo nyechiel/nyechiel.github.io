@@ -120,13 +120,13 @@ a {
   text-decoration: none;
   transition: color 0.15s ease;
 
+  &:visited {
+    color: $text-color;
+  }
+
   &:hover {
     color: $brand-color;
     text-decoration: none;
-  }
-
-  &:visited {
-    color: $text-color;
   }
 }
 
