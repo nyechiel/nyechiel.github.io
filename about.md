@@ -27,6 +27,8 @@ This blog started as a way to document thoughts on computer networking, and has 
 
 I only write about things I believe in. I won't promote something I wouldn't use myself, and I don't take sponsored posts. If I share it here, it's because I stand behind it.
 
+Images on this site are either my own or sourced from [Unsplash](https://unsplash.com/), which provides freely usable photography with no copyright restrictions.
+
 ## Disclaimer
 
 The views in this blog are my own and do not necessarily reflect those of my employer or anyone else. For any official statements on matters in this blog, you should contact the appropriate marketing or media contact in the respective organization(s).

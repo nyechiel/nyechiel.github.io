@@ -13,6 +13,9 @@ tags:
 comments_id: 81
 permalink: "/blog/2026/05/31/what-i-learned-in-my-first-30-days-back-in-product-management/"
 redirect_from: "/2026/05/31/what-i-learned-in-my-first-30-days-back-in-product-management/"
+image:
+  path: /assets/images/blog/what-i-learned-in-my-first-30-days-back-in-product-management.jpg
+  alt: "Person holding a compass facing towards green pine trees"
 ---
 
 In May 2026, I started a new role as Senior Principal Product Manager at Red Hat, focused on AI and the company's Digital Workforce initiative. On paper, it's a PM role. In practice, it's a homecoming - and a culture shock at the same time.

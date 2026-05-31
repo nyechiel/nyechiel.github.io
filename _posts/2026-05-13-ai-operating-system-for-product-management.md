@@ -11,6 +11,9 @@ tags:
 - MCP
 - Red Hat
 comments_id: 70
+image:
+  path: /assets/images/blog/ai-operating-system-for-product-management.jpg
+  alt: "A computer circuit board with a glowing brain pattern"
 ---
 I recently moved back into PM after more than six years in engineering leadership - a transition that probably deserves its own post someday. I currently work as a Senior Principal Product Manager at Red Hat with a strong technical focus, building agentic AI systems that transform how teams across the business work.
 

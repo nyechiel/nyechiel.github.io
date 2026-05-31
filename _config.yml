@@ -50,6 +50,10 @@ feed:
   posts_limit: 50
   excerpt_only: false
 
+# Twitter/X card type
+twitter:
+  card: summary_large_image
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

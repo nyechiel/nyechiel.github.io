@@ -34,6 +34,12 @@ layout: default
     {%- endif -%}
   </header>
 
+  {%- if page.image -%}
+  <div class="post-featured-image">
+    <img src="{{ page.image.path | default: page.image }}" alt="{{ page.image.alt | default: page.title }}" itemprop="image">
+  </div>
+  {%- endif -%}
+
   <div class="post-content e-content" itemprop="articleBody">
     {{ content }}
   </div>
