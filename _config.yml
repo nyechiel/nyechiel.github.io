@@ -25,6 +25,7 @@ show_excerpts: true
 header_pages:
   - index.md
   - blog/index.md
+  - tags.html
   - podcasts.md
   - about.md
 twitter_username: nyechiel
