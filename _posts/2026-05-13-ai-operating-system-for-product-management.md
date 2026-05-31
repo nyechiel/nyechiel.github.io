@@ -10,6 +10,7 @@ tags:
 - Claude Code
 - MCP
 - Red Hat
+description: "How I built an AI-powered workflow to handle the operational side of product management, using Claude Code and MCP integrations."
 comments_id: 70
 image:
   path: /assets/images/blog/ai-operating-system-for-product-management.jpg
