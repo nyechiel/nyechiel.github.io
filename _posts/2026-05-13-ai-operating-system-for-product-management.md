@@ -24,7 +24,7 @@ Product management generates a lot of operational work. Triaging inboxes, preppi
 
 I wanted to flip that ratio. Instead of spending 70% of my time on operational overhead and 30% on strategic work, I wanted the inverse.
 
-## What I Built
+## What I built
 
 I started building what I call NirOps - a local AI system that handles the operational side of my job so I can focus on the parts that require human judgment.
 
@@ -36,7 +36,7 @@ The core idea is simple:
 
 It's not a chatbot I talk to occasionally. It's closer to an operating system that sits underneath my daily workflow - connecting my calendar, email, stakeholders, and ongoing work into a single context that the AI uses to do real operational work.
 
-## What a Typical Day Looks Like
+## What a typical day looks like
 
 ### Morning
 
@@ -62,7 +62,7 @@ Research on demand. Discovery briefs for vague problem areas. Competitive analys
 
 All of these are codified workflows - not ad-hoc prompts.
 
-## How It's Wired Together
+## How it's wired together
 
 The system runs on [Claude Code](https://docs.anthropic.com/en/docs/claude-code), Anthropic's CLI agent, connected to my work tools via [MCP](https://modelcontextprotocol.io/) (Model Context Protocol) - small services that bridge the AI to external APIs.
 
@@ -82,7 +82,7 @@ Most MCP servers run locally as containers behind a gateway proxy. The proxy enf
 
 Everything runs on my laptop (shoutout to the [Fedora](https://fedoraproject.org/) team). No third-party SaaS indexing my workspace data. The knowledge base is markdown files, the task board is SQLite. If the AI tool disappears tomorrow, I still have all my meeting briefs, research notes, and decision records.
 
-## What Makes This Different from "Using ChatGPT"
+## What makes this different from "Using ChatGPT"
 
 The difference isn't the model - it's the context and the workflow.
 
@@ -92,7 +92,7 @@ This system maintains context across sessions: who my stakeholders are, what was
 
 The other difference is tooling. The agent doesn't just answer questions - it reads my email, checks my calendar, searches Jira, looks up people in the directory, and saves its output to structured files. It operates on my actual work environment, not a text box.
 
-## Skills, Not Prompts
+## Skills, not prompts
 
 Each workflow is codified as a skill - a markdown file with explicit steps, tool access declarations, verification checks, and graceful degradation rules. This makes the system reliable instead of ad-hoc:
 
@@ -103,7 +103,7 @@ Each workflow is codified as a skill - a markdown file with explicit steps, tool
 
 There are currently 16 skills covering everything from quick text polishing to full competitive analyses.
 
-## The Design Principles That Matter
+## The design principles that matter
 
 **Human-as-approver.** The agent can research, draft, and organize - but it never sends messages, creates tickets without my confirmation, or marks work as done. Every outward-facing action goes through me. This isn't a limitation - it's the design. The judgment layer stays human.
 
@@ -113,7 +113,7 @@ There are currently 16 skills covering everything from quick text polishing to f
 
 **Inbox zero as a feature.** After triage, processed emails get archived and Slack gets marked as read. Items awaiting my reply stay visible. My inbox reflects my actual to-do list, not a pile of stuff I've already processed mentally.
 
-## What I've Learned
+## What I've learned
 
 **Start with read-only.** Connect tools for reading before writing. Build trust in the system's judgment before giving it any write access. This is the single most important principle for anyone building something similar.
 
@@ -125,7 +125,7 @@ There are currently 16 skills covering everything from quick text polishing to f
 
 **The AI gets better, not just me.** Every captured meeting, every triage run, every research note makes the next one faster and more contextual. The system compounds. After a few weeks, meeting prep that used to take 20 minutes of manual research takes one command and 30 seconds.
 
-## What's Next
+## What's next
 
 This space is moving fast. The models get more capable every few months, and the tooling around them is maturing just as quickly. I expect the skills and workflows I described here to keep evolving - some of what I do manually today will be automated tomorrow, and new capabilities will open up patterns I haven't thought of yet.
 
@@ -133,7 +133,7 @@ I also made a deliberate choice to invest in building this system while onboardi
 
 The bigger challenge ahead isn't the AI itself - it's connecting these workflows to the people around me. Right now, the system mostly serves me: my inbox, my context, my task board. The next step is integrating more deeply into the product delivery team - bridging the gap between PM operational work and engineering execution, making the context I accumulate useful to the people I work with, not just to me. That's where the real leverage is.
 
-## Is This for Everyone?
+## Is this for everyone?
 
 Not yet. Today, this requires comfort with the command line, willingness to debug container networking, and patience to iterate on workflow design. It's not a product you install - it's a system you build. I expect more turnkey offerings to appear as this space matures, but there will always be a need to tune and optimize for your specific workflow.
 
