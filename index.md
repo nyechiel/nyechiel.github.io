@@ -10,7 +10,14 @@ I am a product manager at Red Hat, building agentic AI systems that help enterpr
 
 ## Latest Posts
 
-Check out my [blog](/blog/) for thoughts on product engineering, technology, people, and where they intersect.
+{% for post in site.posts limit:2 %}
+<small>{{ post.date | date: "%B %-d, %Y" }}</small>
+
+**[{{ post.title }}]({{ post.url }})**
+
+{{ post.excerpt | strip_html | truncatewords: 30 }}
+
+{% endfor %}
 
 [View All Posts →](/blog/)
 
