@@ -15,7 +15,7 @@ comments_id: 17
 permalink: "/blog/2016/02/14/boosting-the-nfv-datapath-with-rhel-openstack-platform/"
 redirect_from: "/2016/02/14/boosting-the-nfv-datapath-with-rhel-openstack-platform/"
 ---
-A post I wrote for the [Red Hat Stack](http://redhatstackblog.redhat.com/) blog, trying to clarify what we are doing with RHEL OpenStack Platform to accelerate the datapath for NFV applications.
+A post I wrote for the [Red Hat Stack](https://www.redhat.com/en/blog) blog, trying to clarify what we are doing with RHEL OpenStack Platform to accelerate the datapath for NFV applications.
 
-Read the full post here: [Boosting the NFV datapath with RHEL OpenStack Platform](http://redhatstackblog.redhat.com/2016/02/10/boosting-the-nfv-datapath-with-rhel-openstack-platform/)
+Read the full post here: [Boosting the NFV datapath with RHEL OpenStack Platform](https://www.redhat.com/en/blog/boosting-nfv-datapath-rhel-openstack-platform)
 
