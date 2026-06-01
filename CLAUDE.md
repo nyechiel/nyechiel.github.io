@@ -51,6 +51,11 @@ Comments are powered by GitHub Issues. Each post has a `comments_id` frontmatter
 
 PR and push to `master` trigger: Jekyll build, internal link checking (html-proofer), markdown lint, bundler-audit security scan, and CodeQL analysis. GitHub Actions are pinned to commit SHAs.
 
+## PR conventions
+
+- Never include "Co-authored with Claude Code" or any AI co-authorship attribution in PR descriptions. This is a personal blog.
+- Never push directly to master. Always use a PR.
+
 ## Style notes
 
 - Markdown lint is configured in `.markdownlint.json`
