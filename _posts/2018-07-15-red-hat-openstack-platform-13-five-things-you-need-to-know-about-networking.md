@@ -20,5 +20,5 @@ comments_id: 20
 permalink: "/blog/2018/07/15/red-hat-openstack-platform-13-five-things-you-need-to-know-about-networking/"
 redirect_from: "/2018/07/15/red-hat-openstack-platform-13-five-things-you-need-to-know-about-networking/"
 ---
-A post I wrote for the [Red Hat Stack](http://redhatstackblog.redhat.com) blog, on key networking features included in Red Hat OpenStack Platform 13. Read more here: [Red Hat OpenStack Platform 13: five things you need to know about networking](https://redhatstackblog.redhat.com/2018/07/12/red-hat-openstack-platform-13-five-things-you-need-to-know-about-networking/).
+A post I wrote for the [Red Hat Stack](https://www.redhat.com/en/blog) blog, on key networking features included in Red Hat OpenStack Platform 13. Read more here: [Red Hat OpenStack Platform 13: five things you need to know about networking](https://www.redhat.com/en/blog/red-hat-openstack-platform-13-five-things-you-need-know-about-networking).
 

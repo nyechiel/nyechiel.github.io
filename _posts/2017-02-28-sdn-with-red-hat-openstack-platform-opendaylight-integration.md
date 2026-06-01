@@ -17,5 +17,5 @@ permalink: "/blog/2017/02/28/sdn-with-red-hat-openstack-platform-opendaylight-in
 redirect_from: "/2017/02/28/sdn-with-red-hat-openstack-platform-opendaylight-integration/"
 ---
 
-A short post I wrote for the [Red Hat Stack](http://redhatstackblog.redhat.com) blog, on what Red Hat is doing with OpenStack and OpenDaylight. Read more here:&nbsp;[SDN with Red Hat OpenStack Platform: OpenDaylight Integration](http://redhatstackblog.redhat.com/2017/02/28/sdn-with-red-hat-openstack-platform-opendaylight-integration/).
+A short post I wrote for the [Red Hat Stack](https://www.redhat.com/en/blog) blog, on what Red Hat is doing with OpenStack and OpenDaylight. Read more here:&nbsp;[SDN with Red Hat OpenStack Platform: OpenDaylight Integration](https://www.redhat.com/en/blog/sdn-red-hat-openstack-platform-opendaylight-integration).
 
