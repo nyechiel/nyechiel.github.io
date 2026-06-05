@@ -7,7 +7,7 @@ gem "base64"
 gem "bigdecimal"
 
 # Constrain public_suffix for Ruby 3.1 compatibility (CI uses Ruby 3.1)
-gem "public_suffix", "< 7.0"
+gem "public_suffix", "< 8.0"
 
 # Hello! This is where you manage which Jekyll version is used to run.
 # When you want to use a different version, change it below, save the
