@@ -17,7 +17,7 @@ jobs:
     - name: Set up Ruby
       uses: ruby/setup-ruby@afeafc3d1ab54a631816aba4c914a0081c12ff2f # v1
       with:
-        ruby-version: '3.2'
+        ruby-version-file: '.ruby-version'
         bundler-cache: true
 
     - name: Install dependencies
@@ -70,7 +70,7 @@ jobs:
     - name: Set up Ruby
       uses: ruby/setup-ruby@afeafc3d1ab54a631816aba4c914a0081c12ff2f # v1
       with:
-        ruby-version: '3.2'
+        ruby-version-file: '.ruby-version'
         bundler-cache: true
 
     - name: Install bundler-audit
