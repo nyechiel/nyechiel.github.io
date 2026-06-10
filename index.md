@@ -10,7 +10,7 @@ I am a product manager at Red Hat, building agentic AI systems that reimagine ho
 
 ## Latest Posts
 
-{% for post in site.posts limit:2 %}
+{% for post in site.posts limit:3 %}
 <small>{{ post.date | date: "%B %-d, %Y" }}</small>
 
 **[{{ post.title }}]({{ post.url }})**
