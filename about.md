@@ -8,7 +8,7 @@ I'm a product manager at [Red Hat](https://www.redhat.com/), focused on the inte
 
 I started my career in computer networking, designing and operating networks across enterprise, data center, and service provider environments. That hands-on background led me to product management, where I spent several years bringing open source infrastructure products to market - first Red Hat Virtualization, then OpenStack, and later OpenShift. Along the way I worked closely with upstream communities including oVirt, OpenStack, Kubernetes, Open vSwitch, OpenDaylight, OPNFV, Istio, and others.
 
-In 2019 I joined Facebook (now Meta) to work on connectivity infrastructure, before returning to Red Hat in engineering management. Over six years I grew from managing a single team to a director role overseeing application networking in OpenShift - including Submariner, Service Mesh (Istio, Envoy, Kiali), Ingress/DNS, Kubernetes Gateway API and Service Interconnect (Skupper). In 2026 I transitioned back to product management, this time focused on AI.
+In 2019 I joined Facebook (now Meta) to work on connectivity infrastructure, before returning to Red Hat in engineering management. Over six years I grew from managing a single team to a Director role overseeing application networking in OpenShift - including Submariner, Service Mesh (Istio, Envoy, Kiali), Ingress/DNS, Kubernetes Gateway API and Service Interconnect (Skupper). In 2026 I transitioned back to product management, this time focused on AI.
 
 I care about building products that solve real problems, supporting the people I work with, and staying close to the technology. I'm a strong believer in open source and its ability to drive innovation.
 
