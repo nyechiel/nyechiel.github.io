@@ -1,12 +1,15 @@
 ---
 layout: page
 title: Home
+heading: "Hi, I'm Nir Yechiel."
 description: "Nir Yechiel's personal website — writing about product engineering, technology, and people."
 ---
 
-Hi, I'm Nir Yechiel.
+<div class="home-intro" markdown="1">
 
 I am a product manager at Red Hat, building agentic AI systems that reimagine how enterprise teams work. Previously led engineering teams on OpenShift Networking (Submariner, Service Mesh, Gateway API, Service Interconnect) and held engineering and product roles at Red Hat, Facebook (Meta), and Cisco.
+
+</div>
 
 ## Latest Posts
 

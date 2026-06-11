@@ -82,10 +82,21 @@ a {
   font-weight: 500;
   color: $grey-color;
   transition: color 0.15s ease;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
 
   &:hover {
     color: $text-color;
     text-decoration: none;
+  }
+
+  &--active {
+    color: $brand-color;
+    border-bottom-color: $brand-color;
+
+    &:visited {
+      color: $brand-color;
+    }
   }
 }
 
@@ -282,12 +293,27 @@ table {
   }
 }
 
+.home-intro {
+  font-size: 19px;
+  line-height: 1.6;
+  padding-bottom: $spacing-unit * 1.2;
+  margin-bottom: $spacing-unit * 1.2;
+  border-bottom: 1px solid $grey-color-light;
+  color: $grey-color-dark;
+}
+
 // ————————————————————————————————————
 // Page titles
 // ————————————————————————————————————
 
+@keyframes page-enter {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 .page-content {
   padding: $spacing-unit * 1.5 0;
+  animation: page-enter 0.3s ease-out;
 }
 
 // ————————————————————————————————————
