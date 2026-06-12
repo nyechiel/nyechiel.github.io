@@ -15,7 +15,7 @@ I care about building products that solve real problems, supporting the people I
 
 ## Talks
 
-I've spoken at Red Hat Summit and other industry events on topics including OpenStack networking, SDN, NFV, and Kubernetes multi-cluster connectivity. [Slides are available on GitHub](https://github.com/nyechiel/presentation-slides).
+I've spoken at Red Hat Summit and other industry events on topics including cloud infrastructure, OpenStack, SDN, NFV, and Kubernetes. [Slides are available on GitHub](https://github.com/nyechiel/presentation-slides).
 
 ## Podcasts
 
