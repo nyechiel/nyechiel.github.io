@@ -362,13 +362,78 @@ hr {
 }
 
 // ————————————————————————————————————
-// RSS subscribe link
+// Subscribe
 // ————————————————————————————————————
 
 .rss-subscribe {
   font-size: 14px;
   color: $grey-color;
   margin-top: $spacing-unit * 0.5;
+}
+
+.subscribe-card {
+  margin-top: $spacing-unit;
+  padding: $spacing-unit * 0.6 $spacing-unit * 0.75;
+  background: linear-gradient(135deg, rgba($brand-color, 0.06) 0%, rgba(#6c5ce7, 0.06) 100%);
+  border: 1px solid rgba($brand-color, 0.12);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.subscribe-card__text {
+  font-size: 15px;
+  font-weight: 500;
+  color: $text-color;
+  margin-bottom: 10px;
+}
+
+.subscribe-card__emoji {
+  font-size: 24px;
+  vertical-align: middle;
+  margin-right: 2px;
+}
+
+.subscribe-card__form {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.subscribe-card__input {
+  font-family: $base-font-family;
+  font-size: 14px;
+  padding: 8px 14px;
+  border: 1px solid $grey-color-light;
+  border-radius: 6px;
+  width: 220px;
+  background: #fff;
+  outline: none;
+  transition: border-color 0.15s ease;
+
+  &:focus {
+    border-color: $brand-color;
+  }
+}
+
+.subscribe-card__button {
+  font-family: $base-font-family;
+  background: $brand-color;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+
+  &:hover {
+    background: darken($brand-color, 10%);
+  }
+}
+
+.subscribe-card--post {
+  margin-top: $spacing-unit * 1.5;
 }
 
 // ————————————————————————————————————
@@ -531,5 +596,15 @@ hr {
   .post-tag {
     font-size: 11px;
     padding: 2px 8px;
+  }
+
+  .subscribe-card__form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .subscribe-card__input {
+    width: 100%;
+    max-width: 280px;
   }
 }

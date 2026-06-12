@@ -43,6 +43,15 @@ layout: default
   <div class="post-content e-content" itemprop="articleBody">
     {{ content }}
   </div>
+
+  <div class="subscribe-card subscribe-card--post">
+    <p class="subscribe-card__text">Enjoyed this post? Get new posts straight to your inbox.</p>
+    <form class="subscribe-card__form" action="https://api.follow.it/subscription-form/clBXWVBSbWJyanNERlN2VVRGTUNNdU1uSTF3b1hLRTBGcStIa282RFpaWEVpOVNuOXhieituSC9mVENiTUYzYmRXK25PVVRJM2ZGd3Z0NGVuc0N2R1gxa1lOK1A2S1FrRTEzVXhkZjBvb0xhN2d4L2QxOHpiZ0l1N3V3NmZyRmV8RDY2VzhJN1NzSTJsUyt4L0xTYlJiSkgvUnV6QVdjWjBTem9PQXRFNjBlYz0=/8" method="post">
+      <input class="subscribe-card__input" type="email" name="email" placeholder="your@email.com" required />
+      <button class="subscribe-card__button" type="submit">Subscribe</button>
+    </form>
+  </div>
+
   {% if page.comments_id %}
 	{% include comments.html %}
 	{% endif %}
