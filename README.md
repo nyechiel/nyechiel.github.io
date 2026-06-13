@@ -20,6 +20,7 @@ To add a new post, follow these steps:
 * Developed with Jekyll: https://github.com/jekyll/jekyll
 * Comments system: https://aristath.github.io/blog/static-site-comments-using-github-issues-api
 * Reading time: https://carlosbecker.com/posts/jekyll-reading-time-without-plugins
+* Email subscriptions: https://follow.it
 
 ## License
 
