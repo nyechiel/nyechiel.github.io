@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <filter id="shadow" x="-2%" y="-2%" width="104%" height="104%">
+      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="720" height="520" fill="#fafafa" rx="8"/>
+
+  <!-- You (human-as-approver) -->
+  <rect x="260" y="16" width="200" height="40" rx="20" fill="#1a1a2e" filter="url(#shadow)"/>
+  <text x="360" y="41" text-anchor="middle" fill="#fff" font-size="14" font-weight="600">You (human-as-approver)</text>
+
+  <!-- Arrow: You -> Claude Code -->
+  <line x1="360" y1="56" x2="360" y2="76" stroke="#1a1a2e" stroke-width="2" marker-end="url(#arrowDark)"/>
+  <defs>
+    <marker id="arrowDark" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1a1a2e"/>
+    </marker>
+  </defs>
+
+  <!-- Claude Code box -->
+  <rect x="180" y="78" width="360" height="44" rx="8" fill="#5b21b6" filter="url(#shadow)"/>
+  <text x="360" y="105" text-anchor="middle" fill="#fff" font-size="15" font-weight="600">Claude Code (agent)</text>
+
+  <!-- Four knowledge layer boxes -->
+  <rect x="28" y="148" width="156" height="52" rx="6" fill="#fff" stroke="#d1d5db" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="106" y="170" text-anchor="middle" fill="#1a1a2e" font-size="12" font-weight="600">CLAUDE.md</text>
+  <text x="106" y="186" text-anchor="middle" fill="#6b7280" font-size="10">Rules &amp; boundaries</text>
+
+  <rect x="198" y="148" width="120" height="52" rx="6" fill="#fff" stroke="#d1d5db" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="258" y="170" text-anchor="middle" fill="#1a1a2e" font-size="12" font-weight="600">Skills</text>
+  <text x="258" y="186" text-anchor="middle" fill="#6b7280" font-size="10">Reusable workflows</text>
+
+  <rect x="332" y="148" width="120" height="52" rx="6" fill="#fff" stroke="#d1d5db" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="392" y="170" text-anchor="middle" fill="#1a1a2e" font-size="12" font-weight="600">Memory</text>
+  <text x="392" y="186" text-anchor="middle" fill="#6b7280" font-size="10">Cross-session context</text>
+
+  <rect x="466" y="148" width="120" height="52" rx="6" fill="#fff" stroke="#d1d5db" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="526" y="170" text-anchor="middle" fill="#1a1a2e" font-size="12" font-weight="600">Templates</text>
+  <text x="526" y="186" text-anchor="middle" fill="#6b7280" font-size="10">Document scaffolds</text>
+
+  <!-- Connection lines from Claude Code to knowledge boxes -->
+  <line x1="106" y1="122" x2="106" y2="148" stroke="#9ca3af" stroke-width="1.5"/>
+  <line x1="258" y1="122" x2="258" y2="148" stroke="#9ca3af" stroke-width="1.5"/>
+  <line x1="392" y1="122" x2="392" y2="148" stroke="#9ca3af" stroke-width="1.5"/>
+  <line x1="526" y1="122" x2="526" y2="148" stroke="#9ca3af" stroke-width="1.5"/>
+  <line x1="106" y1="122" x2="526" y2="122" stroke="#9ca3af" stroke-width="1.5"/>
+  <line x1="360" y1="122" x2="360" y2="122" stroke="#9ca3af" stroke-width="1.5"/>
+
+  <!-- App Dashboard container -->
+  <rect x="28" y="228" width="664" height="272" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="48" y="252" fill="#166534" font-size="13" font-weight="600">App Dashboard</text>
+  <text x="186" y="252" fill="#6b7280" font-size="11">localhost:9000 - manages all services</text>
+
+  <!-- Connection line from Claude Code to App Dashboard area -->
+  <line x1="360" y1="200" x2="360" y2="228" stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- MCP Proxy Gateway container -->
+  <rect x="48" y="268" width="440" height="212" rx="6" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="68" y="292" fill="#1e40af" font-size="12" font-weight="600">MCP Proxy Gateway</text>
+  <text x="222" y="292" fill="#6b7280" font-size="10">localhost:9090 - tool allowlists</text>
+
+  <!-- MCP Server boxes -->
+  <rect x="68" y="308" width="192" height="40" rx="5" fill="#fff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="164" y="328" text-anchor="middle" fill="#1e40af" font-size="11" font-weight="500">Gmail, Calendar, Drive</text>
+  <text x="164" y="341" text-anchor="middle" fill="#6b7280" font-size="9">read + organize</text>
+
+  <rect x="272" y="308" width="192" height="40" rx="5" fill="#fff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="368" y="328" text-anchor="middle" fill="#1e40af" font-size="11" font-weight="500">Slack</text>
+  <text x="368" y="341" text-anchor="middle" fill="#6b7280" font-size="9">read + search</text>
+
+  <rect x="68" y="360" width="192" height="40" rx="5" fill="#fff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="164" y="380" text-anchor="middle" fill="#1e40af" font-size="11" font-weight="500">Google Contacts</text>
+  <text x="164" y="393" text-anchor="middle" fill="#6b7280" font-size="9">directory lookup</text>
+
+  <rect x="272" y="360" width="192" height="40" rx="5" fill="#fff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="368" y="380" text-anchor="middle" fill="#1e40af" font-size="11" font-weight="500">Time</text>
+  <text x="368" y="393" text-anchor="middle" fill="#6b7280" font-size="9">timezone-aware clock</text>
+
+  <!-- "Add your own" box -->
+  <rect x="68" y="412" width="396" height="36" rx="5" fill="#fff" stroke="#bfdbfe" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="266" y="435" text-anchor="middle" fill="#93c5fd" font-size="11" font-style="italic">+ add your own (Jira, Notion, GitHub, ...)</text>
+
+  <!-- Crux box -->
+  <rect x="508" y="268" width="164" height="212" rx="6" fill="#fef3c7" stroke="#fcd34d" stroke-width="1.5"/>
+  <text x="590" y="292" text-anchor="middle" fill="#92400e" font-size="12" font-weight="600">Crux</text>
+  <text x="590" y="310" text-anchor="middle" fill="#92400e" font-size="10">Task board</text>
+
+  <!-- Crux features -->
+  <text x="528" y="340" fill="#78716c" font-size="10">Kanban board</text>
+  <text x="528" y="358" fill="#78716c" font-size="10">CLI + Web UI</text>
+  <text x="528" y="376" fill="#78716c" font-size="10">MCP server</text>
+  <text x="528" y="394" fill="#78716c" font-size="10">Labels, priorities</text>
+  <text x="528" y="412" fill="#78716c" font-size="10">Focus flags</text>
+  <text x="528" y="430" fill="#78716c" font-size="10">Comments</text>
+
+  <!-- Backup + DR small label -->
+  <rect x="600" y="148" width="92" height="52" rx="6" fill="#fff" stroke="#d1d5db" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="646" y="170" text-anchor="middle" fill="#1a1a2e" font-size="12" font-weight="600">Ops</text>
+  <text x="646" y="186" text-anchor="middle" fill="#6b7280" font-size="10">Backup + DR</text>
+
+  <line x1="646" y1="122" x2="646" y2="148" stroke="#9ca3af" stroke-width="1.5"/>
+  <line x1="526" y1="122" x2="646" y2="122" stroke="#9ca3af" stroke-width="1.5"/>
+</svg>
