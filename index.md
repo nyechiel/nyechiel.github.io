@@ -11,9 +11,33 @@ I am a product manager at Red Hat, building agentic AI systems that reimagine ho
 
 </div>
 
+{% assign featured = site.posts | where: "featured", true | first %}
+{% if featured %}
+<div class="featured-card">
+  {% if featured.image %}
+  <a href="{{ featured.url }}" class="featured-card__image-link">
+    <img src="{{ featured.image.path | default: featured.image }}" alt="{{ featured.image.alt | default: featured.title }}" class="featured-card__image" />
+  </a>
+  {% endif %}
+  <div class="featured-card__body">
+    <span class="featured-card__label">Featured</span>
+    <h2 class="featured-card__title"><a href="{{ featured.url }}">{{ featured.title }}</a></h2>
+    <p class="featured-card__excerpt">{{ featured.excerpt | strip_html | truncatewords: 40 }}</p>
+    {% if featured.tags.size > 0 %}
+    <ul class="post-tags">
+      {% for tag in featured.tags %}
+      <li><a href="/tags/#{{ tag | slugify }}" class="post-tag post-tag--link">{{ tag }}</a></li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+</div>
+{% endif %}
+
 ## Latest Posts
 
-{% for post in site.posts limit:3 %}
+{% assign post_limit = 3 %}{% if featured %}{% assign post_limit = 4 %}{% endif %}
+{% for post in site.posts limit:post_limit %}{% if featured and post.id == featured.id %}{% continue %}{% endif %}
 <small>{{ post.date | date: "%B %-d, %Y" }}</small>
 
 **[{{ post.title }}]({{ post.url }})**
