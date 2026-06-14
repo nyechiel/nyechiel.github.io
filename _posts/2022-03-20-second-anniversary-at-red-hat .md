@@ -12,7 +12,6 @@ tags:
 - Red Hat
 comments_id: 27
 permalink: "/blog/2022/03/20/second-anniversary-at-red-hat/"
-redirect_from: "/2022/03/20/second-anniversary-at-red-hat/"
 ---
 Last month marked my second service anniversary since rejoining Red Hat. I feel like this is a good opportunity to reflect on the last two years and what I have been up to, both personally and professionally.
 

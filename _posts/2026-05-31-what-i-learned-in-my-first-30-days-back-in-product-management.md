@@ -13,7 +13,6 @@ tags:
 description: "Returning to product management after 6+ years of engineering leadership. What transferred, what didn't, and what surprised me."
 comments_id: 81
 permalink: "/blog/2026/05/31/what-i-learned-in-my-first-30-days-back-in-product-management/"
-redirect_from: "/2026/05/31/what-i-learned-in-my-first-30-days-back-in-product-management/"
 image:
   path: /assets/images/blog/what-i-learned-in-my-first-30-days-back-in-product-management.jpg
   alt: "Person holding a compass facing towards green pine trees"

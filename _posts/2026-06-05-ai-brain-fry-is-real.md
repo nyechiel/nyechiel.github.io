@@ -11,7 +11,6 @@ tags:
 description: "I built an AI-first system for my PM work. It works great. Now I have a different problem - and it has a name: AI brain fry."
 comments_id: 105
 permalink: "/blog/2026/06/05/ai-brain-fry-is-real/"
-redirect_from: "/2026/06/05/ai-brain-fry-is-real/"
 image:
   path: /assets/images/blog/ai-brain-fry-is-real.jpg
   alt: "Assorted colorful sticky notes"
