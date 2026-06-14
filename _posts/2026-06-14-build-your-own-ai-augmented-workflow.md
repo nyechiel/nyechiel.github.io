@@ -14,7 +14,6 @@ tags:
 description: "A practical guide to building an AI-powered knowledge worker workflow using Claude Code and MCP - with a template repo to get you started."
 comments_id: 115
 permalink: "/blog/2026/06/14/build-your-own-ai-augmented-workflow/"
-redirect_from: "/2026/06/14/build-your-own-ai-augmented-workflow/"
 featured: true
 image:
   path: /assets/images/blog/ai-augmented-workflow.jpg
