@@ -147,7 +147,7 @@ This installs Crux and App Dashboard (both bundled in the repo), copies config t
 4. **Customize CLAUDE.md** - Add your rules, integrations, and context. The setup script created a starter file from the template.
 5. **Start Claude Code** - type `/` and try a skill.
 
-The [setup guide](https://github.com/nyechiel/ai-augmented-workflow/blob/master/docs/SETUP.md) has the full step-by-step, the [customization guide](https://github.com/nyechiel/ai-augmented-workflow/blob/master/docs/CUSTOMIZATION.md) covers how to adapt everything to your specific role and tools, and the [workflow guide](https://github.com/nyechiel/ai-augmented-workflow/blob/master/workflow-guide.md) shows how the skills connect and a suggested daily rhythm.
+The [setup guide](https://github.com/nyechiel/ai-augmented-workflow/blob/main/docs/SETUP.md) has the full step-by-step, the [customization guide](https://github.com/nyechiel/ai-augmented-workflow/blob/main/docs/CUSTOMIZATION.md) covers how to adapt everything to your specific role and tools, and the [workflow guide](https://github.com/nyechiel/ai-augmented-workflow/blob/main/workflow-guide.md) shows how the skills connect and a suggested daily rhythm.
 
 Start small. Get CLAUDE.md, two memory files, and one skill working before adding complexity. Let feedback memories accumulate naturally as you correct the agent. The system gets better the more you use it. Initial setup takes a few hours, mostly for OAuth credentials. The real investment is in writing rules and building skills over weeks.
 
@@ -165,4 +165,4 @@ Building this system taught me a few things that only became clear in hindsight.
 
 **The ops layer matters more than you think.** A backup script and a service manager sound boring compared to skills and MCP servers. But the system I had in week one (no backup, manual container restarts) felt fragile and temporary. The one I have now feels permanent. That psychological shift changes how much you invest in it.
 
-This template is a starting point. The value comes from making it yours - your tools, your workflows, your accumulated knowledge. Clone the [repo](https://github.com/nyechiel/ai-augmented-workflow), start small, and iterate. If you build something interesting with it, I'd love to hear about it - [contributions are welcome](https://github.com/nyechiel/ai-augmented-workflow/blob/master/CONTRIBUTING.md) too.
+This template is a starting point. The value comes from making it yours - your tools, your workflows, your accumulated knowledge. Clone the [repo](https://github.com/nyechiel/ai-augmented-workflow), start small, and iterate. If you build something interesting with it, I'd love to hear about it - [contributions are welcome](https://github.com/nyechiel/ai-augmented-workflow/blob/main/CONTRIBUTING.md) too.
