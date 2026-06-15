@@ -20,7 +20,7 @@ I am a product manager at Red Hat, building agentic AI systems that reimagine ho
   </a>
   {% endif %}
   <div class="featured-card__body">
-    <span class="featured-card__label">Featured</span>
+    <span class="featured-card__label">⭐ Featured</span>
     <h2 class="featured-card__title"><a href="{{ featured.url }}">{{ featured.title }}</a></h2>
     <p class="featured-card__excerpt">{{ featured.excerpt | strip_html | truncatewords: 40 }}</p>
     {% if featured.tags.size > 0 %}
