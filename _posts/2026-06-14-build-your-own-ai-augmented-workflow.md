@@ -36,7 +36,7 @@ My own system is built around product management. But when people asked how to b
 
 ## The approach
 
-The system I built uses [Claude Code](https://claude.ai/claude-code) as the agent and [MCP (Model Context Protocol)](https://modelcontextprotocol.io/) to connect it to real tools - email, calendar, chat, task management, documents. The key idea is that the agent operates with the same tools you use, but with explicit boundaries and a human-as-approver model.
+The system I built uses [Claude Code](https://www.anthropic.com/claude-code) as the agent and [MCP (Model Context Protocol)](https://modelcontextprotocol.io/) to connect it to real tools - email, calendar, chat, task management, documents. The key idea is that the agent operates with the same tools you use, but with explicit boundaries and a human-as-approver model.
 
 Here's the architecture:
 
