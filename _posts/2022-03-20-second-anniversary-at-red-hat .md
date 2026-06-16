@@ -7,7 +7,7 @@ categories:
 tags:
 - Career
 - Kubernetes
-- Management
+- Leadership
 - OpenShift
 - Red Hat
 comments_id: 27
