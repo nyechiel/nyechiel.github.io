@@ -1,0 +1,130 @@
+---
+layout: page
+title: Search
+permalink: /search/
+---
+
+<div class="search-page">
+  <div class="search-input-wrap">
+    <input type="text" id="search-input" class="search-input" placeholder="Search posts..." autocomplete="off" autofocus>
+  </div>
+  <div id="search-results" class="search-results"></div>
+  <div id="search-status" class="search-status"></div>
+</div>
+
+<script>
+(function() {
+  var input = document.getElementById('search-input');
+  var resultsEl = document.getElementById('search-results');
+  var statusEl = document.getElementById('search-status');
+  var posts = null;
+  var debounceTimer = null;
+
+  // Load the search index
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', '{{ "/search.json" | relative_url }}');
+  xhr.onload = function() {
+    if (xhr.status === 200) {
+      posts = JSON.parse(xhr.responseText);
+    }
+  };
+  xhr.send();
+
+  // Pre-populate from query string (e.g., /search/?q=kubernetes)
+  var params = new URLSearchParams(window.location.search);
+  var initialQuery = params.get('q');
+  if (initialQuery) {
+    input.value = initialQuery;
+  }
+
+  input.addEventListener('input', function() {
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(doSearch, 200);
+  });
+
+  // Run initial search if query param was present
+  if (initialQuery) {
+    var waitForPosts = setInterval(function() {
+      if (posts) {
+        clearInterval(waitForPosts);
+        doSearch();
+      }
+    }, 50);
+  }
+
+  function doSearch() {
+    var query = input.value.trim().toLowerCase();
+
+    if (!query) {
+      resultsEl.innerHTML = '';
+      statusEl.innerHTML = '';
+      return;
+    }
+
+    if (!posts) {
+      statusEl.innerHTML = '<p class="search-message">Loading search index...</p>';
+      return;
+    }
+
+    var words = query.split(/\s+/).filter(function(w) { return w.length > 0; });
+    var scored = [];
+
+    for (var i = 0; i < posts.length; i++) {
+      var post = posts[i];
+      var score = 0;
+      var titleLower = post.title.toLowerCase();
+      var tagsLower = post.tags.map(function(t) { return t.toLowerCase(); });
+      var contentLower = post.content.toLowerCase();
+
+      for (var j = 0; j < words.length; j++) {
+        var w = words[j];
+        // Title matches worth the most
+        if (titleLower.indexOf(w) !== -1) score += 10;
+        // Tag matches
+        for (var k = 0; k < tagsLower.length; k++) {
+          if (tagsLower[k].indexOf(w) !== -1) score += 5;
+        }
+        // Content matches
+        if (contentLower.indexOf(w) !== -1) score += 1;
+      }
+
+      if (score > 0) {
+        scored.push({ post: post, score: score });
+      }
+    }
+
+    // Sort by score descending
+    scored.sort(function(a, b) { return b.score - a.score; });
+
+    if (scored.length === 0) {
+      resultsEl.innerHTML = '';
+      statusEl.innerHTML = '<p class="search-message">No posts found for "' + escapeHtml(input.value.trim()) + '"</p>';
+      return;
+    }
+
+    statusEl.innerHTML = '<p class="search-message">' + scored.length + ' result' + (scored.length === 1 ? '' : 's') + ' found</p>';
+
+    var html = '<ul class="post-list">';
+    for (var i = 0; i < scored.length; i++) {
+      var post = scored[i].post;
+      var excerpt = post.excerpt;
+      if (excerpt.length > 200) {
+        excerpt = excerpt.substring(0, 200) + '...';
+      }
+      html += '<li>';
+      html += '<span class="post-meta">' + escapeHtml(post.date) + '</span>';
+      html += '<h3><a class="post-link" href="' + escapeHtml(post.url) + '">' + escapeHtml(post.title) + '</a></h3>';
+      html += '<p>' + escapeHtml(excerpt) + '</p>';
+      html += '</li>';
+    }
+    html += '</ul>';
+    resultsEl.innerHTML = html;
+  }
+
+  function escapeHtml(text) {
+    var el = document.createElement('div');
+    el.appendChild(document.createTextNode(text));
+    return el.innerHTML;
+  }
+})();
+</script>
