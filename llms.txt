@@ -18,7 +18,7 @@ The blog reflects this journey: early posts are deep technical content on networ
 {%- endfor %}
 
 ## Career and Leadership
-{% assign career_posts = site.posts | where_exp: "post", "post.tags contains 'Career' or post.tags contains 'Management' or post.tags contains 'People'" %}{% assign career_no_ai = "" | split: "" %}{% for post in career_posts %}{% unless post.tags contains 'AI' %}{% assign career_no_ai = career_no_ai | push: post %}{% endunless %}{% endfor %}
+{% assign career_no_ai = "" | split: "" %}{% for post in site.posts %}{% if post.tags contains 'Career' or post.tags contains 'Management' or post.tags contains 'People' %}{% unless post.tags contains 'AI' %}{% assign career_no_ai = career_no_ai | push: post %}{% endunless %}{% endif %}{% endfor %}
 {%- for post in career_no_ai %}
 - [{{ post.title }}]({{ site.url }}{{ post.url }}): {{ post.excerpt | strip_html | strip_newlines | truncatewords: 30 }}
 {%- endfor %}
