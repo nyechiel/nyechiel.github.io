@@ -888,7 +888,9 @@ hr {
 
   .nav-search {
     display: block;
-    padding: 5px 0;
+    padding: 8px 10px 5px;
+    margin: 5px 10px 0;
+    border-top: 1px solid $grey-color-light;
   }
 
   .nav-search__toggle {
@@ -906,6 +908,8 @@ hr {
     border: 1px solid $grey-color-light;
     border-radius: 5px;
     font-size: 15px;
+    box-sizing: border-box;
+    text-align: left;
   }
 
   .nav-search__results {
@@ -917,6 +921,7 @@ hr {
     border: 1px solid $grey-color-light;
     border-top: none;
     margin-top: 0;
+    text-align: left;
   }
 
 }
