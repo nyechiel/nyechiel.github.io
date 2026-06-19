@@ -1,0 +1,37 @@
+---
+layout: null
+sitemap:
+  exclude: 'yes'
+---
+# {{ site.title }}
+
+> Personal blog of Nir Yechiel, a Senior Principal Product Manager at Red Hat focused on AI and enterprise software. Covers AI-augmented workflows, product management, networking, OpenStack, Kubernetes, and career reflections. Active since {{ site.posts.last.date | date: "%Y" }}, with {{ site.posts.size }} posts.
+
+Nir started in computer networking (Cisco, Red Hat), moved to product management for OpenStack and OpenShift, spent time at Facebook/Meta on connectivity infrastructure, then returned to Red Hat in engineering management leading OpenShift networking teams (Submariner, Service Mesh, Gateway API, Service Interconnect). In 2026 he transitioned back to product management, focused on AI.
+
+The blog reflects this journey: early posts are deep technical content on networking and OpenStack, middle posts cover career transitions and leadership, and recent posts focus on AI-augmented product management workflows.
+
+## AI and Product Management
+{% assign ai_posts = site.posts | where_exp: "post", "post.tags contains 'AI'" %}
+{%- for post in ai_posts %}
+- [{{ post.title }}]({{ site.url }}{{ post.url }}): {{ post.excerpt | strip_html | strip_newlines | truncatewords: 30 }}
+{%- endfor %}
+
+## Career and Leadership
+{% assign career_posts = site.posts | where_exp: "post", "post.tags contains 'Career' or post.tags contains 'Management' or post.tags contains 'People'" %}{% assign career_no_ai = "" | split: "" %}{% for post in career_posts %}{% unless post.tags contains 'AI' %}{% assign career_no_ai = career_no_ai | push: post %}{% endunless %}{% endfor %}
+{%- for post in career_no_ai %}
+- [{{ post.title }}]({{ site.url }}{{ post.url }}): {{ post.excerpt | strip_html | strip_newlines | truncatewords: 30 }}
+{%- endfor %}
+
+## Networking and OpenStack
+{% assign ai_career_tags = "AI,Career,Management,People" | split: "," %}{% assign tech_posts = "" | split: "" %}{% for post in site.posts %}{% assign dominated = false %}{% for tag in post.tags %}{% if ai_career_tags contains tag %}{% assign dominated = true %}{% endif %}{% endfor %}{% unless dominated %}{% assign tech_posts = tech_posts | push: post %}{% endunless %}{% endfor %}
+{%- for post in tech_posts %}
+- [{{ post.title }}]({{ site.url }}{{ post.url }}): {{ post.excerpt | strip_html | strip_newlines | truncatewords: 30 }}
+{%- endfor %}
+
+## Pages
+
+- [About]({{ site.url }}/about/): Author bio, career background, and site information.
+- [Blog Archive]({{ site.url }}/blog/): Full list of all blog posts.
+- [Tags]({{ site.url }}/tags/): Browse posts by topic tag.
+- [Podcasts]({{ site.url }}/podcasts/): Podcast episodes featuring Nir Yechiel.
