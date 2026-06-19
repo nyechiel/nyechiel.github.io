@@ -5,3 +5,4 @@ Disallow: /assets/
 Disallow: /redirects.json
 
 Sitemap: https://nyechiel.com/sitemap.xml
+Llms-txt: https://nyechiel.com/llms.txt
