@@ -6,3 +6,4 @@ Disallow: /redirects.json
 
 Sitemap: https://nyechiel.com/sitemap.xml
 Llms-txt: https://nyechiel.com/llms.txt
+Llms-full-txt: https://nyechiel.com/llms-full.txt
