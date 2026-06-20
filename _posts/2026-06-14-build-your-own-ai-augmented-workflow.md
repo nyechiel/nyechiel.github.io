@@ -149,7 +149,7 @@ This installs Crux and App Dashboard (both bundled in the repo), copies config t
 
 The [setup guide](https://github.com/nyechiel/ai-augmented-workflow/blob/main/docs/SETUP.md) has the full step-by-step, the [customization guide](https://github.com/nyechiel/ai-augmented-workflow/blob/main/docs/CUSTOMIZATION.md) covers how to adapt everything to your specific role and tools, and the [workflow guide](https://github.com/nyechiel/ai-augmented-workflow/blob/main/workflow-guide.md) shows how the skills connect and a suggested daily rhythm.
 
-Start small. Get CLAUDE.md, two memory files, and one skill working before adding complexity. Let feedback memories accumulate naturally as you correct the agent. The system gets better the more you use it. Initial setup takes a few hours, mostly for OAuth credentials. The real investment is in writing rules and building skills over weeks.
+**Start small.** Get CLAUDE.md, two memory files, and one skill working before adding complexity. Let feedback memories accumulate naturally as you correct the agent. The system gets better the more you use it. Initial setup takes a few hours, mostly for OAuth credentials. The real investment is in writing rules and building skills over weeks.
 
 ## What I learned
 
@@ -159,7 +159,7 @@ Building this system taught me a few things that only became clear in hindsight.
 
 **Memory compounds.** The first week is clunky. By week four, the agent knows your preferences, your stakeholders, and your quirks. It stops making mistakes you've already corrected. This compounding effect is the thing that makes the system genuinely useful rather than just interesting.
 
-**Read-only is a feature, not a limitation.** The strongest trust signal is that the agent can't accidentally send a message or create an issue. Once you trust the boundaries, you stop second-guessing and start delegating more.
+**Read-only is a feature, not a limitation.** The strongest trust signal is that the agent can't accidentally send a message or create an issue. Once you trust the boundaries, you stop second-guessing and start delegating more. If you're in an enterprise environment, this matters even more - check with your IT and security teams before connecting to corporate systems. Organizations have policies about third-party tool access, API token usage, and AI adoption that apply here. The tool allowlists and read-only defaults give you a strong starting point, but organizational policy comes first.
 
 **Skills are never done.** My earliest skills were simple and brittle. Over time, they grew cross-references (inbox-triage creates tasks that delegate picks up), graceful degradation (skills that work even when some MCP servers are down), and edge case handling I never anticipated. Quality comes from multiple layers: tool allowlists limit what each skill can access, structured steps guide the agent through a predictable process, the human-as-approver model means every output gets reviewed, and /learn turns corrections into persistent rules. I'm looking at a more formal eval pipeline as the skill set grows.
 

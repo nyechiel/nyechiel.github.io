@@ -9,7 +9,7 @@ description: "Nir Yechiel's personal website — writing about product engineeri
 
 I'm currently a product manager at Red Hat, working on agentic AI for enterprise teams. I've been on both sides of the build - engineering leadership and product - and I write about AI, product craft, and the human side of shipping software.
 
-When I'm not working, you'll find me running, on a yoga mat, or lost in music.
+Outside of work, you'll find me running, on a yoga mat, or lost in music.
 
 </div>
 
