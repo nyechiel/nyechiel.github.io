@@ -1,0 +1,21 @@
+---
+layout: null
+sitemap:
+  exclude: 'yes'
+---
+# {{ site.title }}
+
+> Personal blog of Nir Yechiel, a Senior Principal Product Manager at Red Hat focused on AI and enterprise software. Covers AI-augmented workflows, product management, networking, OpenStack, Kubernetes, and career reflections. Active since {{ site.posts.last.date | date: "%Y" }}, with {{ site.posts.size }} posts. Last published: {{ site.posts.first.date | date: "%B %Y" }}.
+
+{% for post in site.posts %}
+---
+
+## {{ post.title }}
+
+- URL: {{ site.url }}{{ post.url }}
+- Date: {{ post.date | date: "%Y-%m-%d" }}
+- Tags: {{ post.tags | join: ", " }}
+
+{{ post.content | strip_html | strip_newlines | replace: "  ", " " }}
+
+{% endfor %}
