@@ -14,7 +14,7 @@ comments_id: 138
 permalink: "/blog/2026/06/21/the-harness-is-the-product/"
 image:
   path: /assets/images/blog/the-harness-is-the-product.jpg
-  alt: "A car with its hood open, revealing the engine inside"
+  alt: "A close-up of an engine bay with red and black components, hoses, and wiring"
 ---
 
 If you're building on top of an LLM, there's a natural instinct to chase the best model. Bigger parameter counts, higher benchmark scores, the latest release from OpenAI or Anthropic or Google. The model feels like the thing that matters most.
