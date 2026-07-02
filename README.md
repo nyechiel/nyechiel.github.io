@@ -1,6 +1,9 @@
 # nyechiel.github.io
 
 [![PR Tests](https://github.com/nyechiel/nyechiel.github.io/actions/workflows/pr-tests.yml/badge.svg)](https://github.com/nyechiel/nyechiel.github.io/actions/workflows/pr-tests.yml)
+[![Deploy](https://github.com/nyechiel/nyechiel.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/nyechiel/nyechiel.github.io/actions/workflows/pages/pages-build-deployment)
+[![CodeQL](https://github.com/nyechiel/nyechiel.github.io/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/nyechiel/nyechiel.github.io/actions/workflows/codeql-analysis.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 Source code for [nyechiel.com](https://nyechiel.com) - a personal blog about AI, product craft, and the human side of shipping software.
 
