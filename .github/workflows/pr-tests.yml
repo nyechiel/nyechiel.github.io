@@ -184,8 +184,8 @@ jobs:
 
     - name: Check 404 page has navigation links
       run: |
-        grep -q 'href="/blog/"' _site/404/index.html
-        grep -q 'href="/search/"' _site/404/index.html
+        grep -q 'href="/blog/"' _site/404.html
+        grep -q 'href="/search/"' _site/404.html
         echo "404 page has navigation links"
 
     - name: Check URL validator rejects path traversal
