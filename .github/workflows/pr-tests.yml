@@ -192,3 +192,16 @@ jobs:
       run: |
         grep -q "\.\." _site/assets/js/comments.js
         echo "path traversal check present in URL validator"
+
+    - name: Check comment avatars have alt text
+      run: |
+        grep -q "avatar" _site/assets/js/comments.js
+        grep -q "setAttribute.*alt" _site/assets/js/comments.js
+        echo "avatar alt text found"
+
+    - name: Check subscribe forms have accessible labels
+      run: |
+        grep -q 'aria-label="Email address"' _site/index.html
+        POST=$(find _site/blog/20* -name 'index.html' | tail -1)
+        grep -q 'aria-label="Email address"' "$POST"
+        echo "subscribe form labels found"
