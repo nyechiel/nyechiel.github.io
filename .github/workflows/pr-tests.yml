@@ -43,7 +43,7 @@ jobs:
       run: |
         htmlproofer _site \
           --disable-external \
-          --ignore-urls "/^\/2[0-9]{3}\//,/^https:\/\/nyechiel\.com\/2[0-9]{3}\//,/fontawesome/" \
+          --ignore-urls "/^\/2[0-9]{3}\//,/^https:\/\/nyechiel\.com\/2[0-9]{3}\//" \
           --no-enforce-https
 
   markdown-lint:
@@ -100,6 +100,73 @@ jobs:
       env:
         JEKYLL_ENV: production
 
+    - name: No Font Awesome references
+      run: |
+        if grep -r 'fontawesome' _site/ --include='*.html' -l; then
+          echo "FAIL: Font Awesome references found in built site"
+          exit 1
+        fi
+        echo "PASS: No Font Awesome references"
+
+    - name: No trailing spaces in post filenames
+      run: |
+        if ls _posts/*' '* 2>/dev/null; then
+          echo "FAIL: Post filenames with trailing spaces found"
+          exit 1
+        fi
+        echo "PASS: No trailing spaces in filenames"
+
+    - name: Check skip-to-content link exists
+      run: |
+        grep -q 'class="skip-link"' _site/index.html
+        grep -q 'id="main-content"' _site/index.html
+        echo "skip-to-content link found"
+
+    - name: Check aria-label on hamburger menu
+      run: |
+        grep -q 'aria-label="Menu"' _site/index.html
+        echo "hamburger aria-label found"
+
+    - name: Check aria-label on nav search input
+      run: |
+        grep -q 'aria-label="Search posts"' _site/index.html
+        echo "search input aria-label found"
+
+    - name: Check aria-live on search results
+      run: |
+        grep -q 'aria-live="polite"' _site/index.html
+        grep -q 'aria-live="polite"' _site/search/index.html
+        echo "aria-live regions found"
+
+    - name: Check lazy loading on images
+      run: |
+        grep -q 'loading="lazy"' _site/index.html
+        echo "lazy loading found on homepage"
+
+    - name: Check external JS files exist
+      run: |
+        test -f _site/assets/js/nav-search.js
+        test -f _site/assets/js/comments.js
+        test -f _site/assets/js/search.js
+        test -f _site/assets/js/tags.js
+        echo "all external JS files found"
+
+    - name: Check no inline script blocks in templates
+      run: |
+        INLINE_COUNT=$(grep -c '<script>' _site/index.html || true)
+        JSONLD_COUNT=$(grep -c 'application/ld+json' _site/index.html || true)
+        if [ "$INLINE_COUNT" -gt "$JSONLD_COUNT" ]; then
+          echo "FAIL: found inline scripts beyond JSON-LD in index.html"
+          exit 1
+        fi
+        echo "no unexpected inline scripts"
+
+    - name: Check data attributes for Liquid values
+      run: |
+        grep -q 'data-search-url=' _site/index.html
+        grep -q 'data-search-url=' _site/search/index.html
+        echo "data attributes found"
+
     - name: Check Content-Security-Policy header
       run: |
         grep -q 'Content-Security-Policy' _site/index.html
@@ -123,6 +190,5 @@ jobs:
 
     - name: Check URL validator rejects path traversal
       run: |
-        POSTFILE=$(find _site/blog -name "*.html" -exec grep -l 'isValidGitHubURL' {} \; | head -1)
-        grep -q "\.\\." "$POSTFILE"
+        grep -q "\.\." _site/assets/js/comments.js
         echo "path traversal check present in URL validator"

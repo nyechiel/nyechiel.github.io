@@ -8,7 +8,7 @@
     {%- if page_paths -%}
       <nav class="site-nav">
         <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-        <label for="nav-trigger">
+        <label for="nav-trigger" aria-label="Menu">
           <span class="menu-icon">
             <svg viewBox="0 0 18 15" width="18px" height="15px">
               <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
@@ -26,12 +26,12 @@
             <a class="page-link{% if is_active %} page-link--active{% endif %}" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
             {%- endif -%}
           {%- endfor -%}
-          <span class="nav-search" id="nav-search">
+          <span class="nav-search" id="nav-search" data-search-url="{{ '/search.json' | relative_url }}">
             <button type="button" class="nav-search__toggle" id="nav-search-toggle" aria-label="Search">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
             </button>
-            <input type="text" id="nav-search-input" class="nav-search__input" placeholder="Search posts..." autocomplete="off">
-            <div id="nav-search-results" class="nav-search__results"></div>
+            <input type="text" id="nav-search-input" class="nav-search__input" placeholder="Search posts..." autocomplete="off" aria-label="Search posts">
+            <div id="nav-search-results" class="nav-search__results" aria-live="polite"></div>
           </span>
         </div>
       </nav>
@@ -39,115 +39,4 @@
   </div>
 </header>
 
-<script>
-(function() {
-  var input = document.getElementById('nav-search-input');
-  var resultsEl = document.getElementById('nav-search-results');
-  var toggle = document.getElementById('nav-search-toggle');
-  var container = document.getElementById('nav-search');
-  if (!input || !resultsEl || !toggle || !container) return;
-
-  var posts = null;
-  var debounceTimer = null;
-  var isOpen = false;
-
-  var xhr = new XMLHttpRequest();
-  xhr.open('GET', '{{ "/search.json" | relative_url }}');
-  xhr.onload = function() {
-    if (xhr.status === 200) posts = JSON.parse(xhr.responseText);
-  };
-  xhr.send();
-
-  function openSearch() {
-    isOpen = true;
-    container.classList.add('nav-search--open');
-    input.focus();
-  }
-
-  function closeSearch() {
-    isOpen = false;
-    container.classList.remove('nav-search--open');
-    input.value = '';
-    resultsEl.innerHTML = '';
-    resultsEl.style.display = 'none';
-  }
-
-  toggle.addEventListener('click', function(e) {
-    e.stopPropagation();
-    if (isOpen) { closeSearch(); } else { openSearch(); }
-  });
-
-  input.addEventListener('input', function() {
-    clearTimeout(debounceTimer);
-    debounceTimer = setTimeout(doSearch, 200);
-  });
-
-  input.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') { closeSearch(); }
-  });
-
-  document.addEventListener('click', function(e) {
-    if (!e.target.closest('#nav-search')) { closeSearch(); }
-  });
-
-  function doSearch() {
-    var query = input.value.trim().toLowerCase();
-    if (!query || !posts) {
-      resultsEl.innerHTML = '';
-      resultsEl.style.display = 'none';
-      return;
-    }
-
-    var words = query.split(/\s+/).filter(function(w) { return w.length > 0; });
-    var scored = [];
-
-    for (var i = 0; i < posts.length; i++) {
-      var post = posts[i];
-      var score = 0;
-      var titleLower = post.title.toLowerCase();
-      var tagsLower = post.tags.map(function(t) { return t.toLowerCase(); });
-      var contentLower = post.content.toLowerCase();
-
-      for (var j = 0; j < words.length; j++) {
-        var w = words[j];
-        if (titleLower.indexOf(w) !== -1) score += 10;
-        for (var k = 0; k < tagsLower.length; k++) {
-          if (tagsLower[k].indexOf(w) !== -1) score += 5;
-        }
-        if (contentLower.indexOf(w) !== -1) score += 1;
-      }
-
-      if (score > 0) scored.push({ post: post, score: score });
-    }
-
-    scored.sort(function(a, b) { return b.score - a.score; });
-
-    if (scored.length === 0) {
-      resultsEl.innerHTML = '<div class="nav-search__empty">No results</div>';
-      resultsEl.style.display = 'block';
-      return;
-    }
-
-    var max = Math.min(scored.length, 6);
-    var html = '';
-    for (var i = 0; i < max; i++) {
-      var p = scored[i].post;
-      html += '<a class="nav-search__item" href="' + esc(p.url) + '">';
-      html += '<span class="nav-search__item-title">' + esc(p.title) + '</span>';
-      html += '<span class="nav-search__item-date">' + esc(p.date) + '</span>';
-      html += '</a>';
-    }
-    if (scored.length > max) {
-      html += '<a class="nav-search__more" href="/search/?q=' + encodeURIComponent(input.value.trim()) + '">' + scored.length + ' results - view all</a>';
-    }
-    resultsEl.innerHTML = html;
-    resultsEl.style.display = 'block';
-  }
-
-  function esc(text) {
-    var el = document.createElement('div');
-    el.appendChild(document.createTextNode(text));
-    return el.innerHTML;
-  }
-})();
-</script>
+<script src="{{ '/assets/js/nav-search.js' | relative_url }}"></script>

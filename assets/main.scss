@@ -20,6 +20,36 @@ $spacing-unit: 32px;
 @import "minima";
 
 // ————————————————————————————————————
+// Skip link (accessibility)
+// ————————————————————————————————————
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: 9999;
+  padding: 8px 16px;
+  background: $brand-color;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 0 0 4px 0;
+
+  &:focus {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    overflow: visible;
+  }
+}
+
+// ————————————————————————————————————
 // Typography refinements
 // ————————————————————————————————————
 
@@ -677,6 +707,12 @@ hr {
 
   &:hover {
     color: $brand-color;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $brand-color;
+    outline-offset: 2px;
+    border-radius: 2px;
   }
 }
 
