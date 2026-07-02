@@ -50,8 +50,10 @@
 
     var userAvatar = document.createElement( 'img' );
     userAvatar.classList.add( 'avatar' );
+    var username = ( response.user && response.user.login ) || 'User';
     if ( response.user && response.user.avatar_url && isValidGitHubURL( response.user.avatar_url ) ) {
       userAvatar.setAttribute( 'src', response.user.avatar_url );
+      userAvatar.setAttribute( 'alt', username + "'s avatar" );
     } else {
       userAvatar.setAttribute( 'src', '' );
       userAvatar.setAttribute( 'alt', 'Avatar' );
@@ -94,13 +96,6 @@
     }
 
     var comment = document.createElement( 'li' );
-    comment.setAttribute( 'data-created', response.created_at );
-    if ( response.user && response.user.avatar_url ) {
-      comment.setAttribute( 'data-author-avatar', response.user.avatar_url );
-    }
-    if ( response.user && response.user.url ) {
-      comment.setAttribute( 'data-user-url', response.user.url );
-    }
 
     comment.appendChild( user );
     comment.appendChild( commentContents );
