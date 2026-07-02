@@ -43,7 +43,7 @@ jobs:
       run: |
         htmlproofer _site \
           --disable-external \
-          --ignore-urls "/^\/2[0-9]{3}\//,/^https:\/\/nyechiel\.com\/2[0-9]{3}\//,/fontawesome/" \
+          --ignore-urls "/^\/2[0-9]{3}\//,/^https:\/\/nyechiel\.com\/2[0-9]{3}\//" \
           --no-enforce-https
 
   markdown-lint:
@@ -81,3 +81,37 @@ jobs:
 
     - name: Run bundle audit
       run: bundler-audit check
+
+  site-checks:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@9eb537ca036ebaed86729dcb9309076e4c5c3b74 # v1
+      with:
+        ruby-version-file: '.ruby-version'
+        bundler-cache: true
+
+    - name: Build Jekyll site
+      run: bundle exec jekyll build
+      env:
+        JEKYLL_ENV: production
+
+    - name: No Font Awesome references
+      run: |
+        if grep -r 'fontawesome' _site/ --include='*.html' -l; then
+          echo "FAIL: Font Awesome references found in built site"
+          exit 1
+        fi
+        echo "PASS: No Font Awesome references"
+
+    - name: No trailing spaces in post filenames
+      run: |
+        if ls _posts/*' '* 2>/dev/null; then
+          echo "FAIL: Post filenames with trailing spaces found"
+          exit 1
+        fi
+        echo "PASS: No trailing spaces in filenames"
