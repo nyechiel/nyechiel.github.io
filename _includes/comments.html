@@ -11,10 +11,12 @@ const GH_API_URL = 'https://api.github.com/repos/nyechiel/nyechiel.github.io/iss
 function isValidGitHubURL( url ) {
 	try {
 		const parsed = new URL( url );
-		return parsed.protocol === 'https:' &&
-		       (parsed.hostname === 'github.com' ||
-		        parsed.hostname === 'api.github.com' ||
-		        parsed.hostname === 'avatars.githubusercontent.com');
+		if ( parsed.protocol !== 'https:' ) return false;
+		if ( parsed.hostname !== 'github.com' &&
+		     parsed.hostname !== 'api.github.com' &&
+		     parsed.hostname !== 'avatars.githubusercontent.com' ) return false;
+		if ( parsed.pathname.indexOf( '..' ) !== -1 ) return false;
+		return true;
 	} catch {
 		return false;
 	}
