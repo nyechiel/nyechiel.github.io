@@ -136,6 +136,34 @@ jobs:
         grep -q "\.\." _site/assets/js/comments.js
         echo "path traversal check present in URL validator"
 
+    - name: Check no duplicate structured data on posts
+      run: |
+        POST=$(find _site/blog -name 'index.html' | head -1)
+        COUNT=$(grep -c 'application/ld+json' "$POST")
+        if [ "$COUNT" -gt 1 ]; then
+          echo "FAIL: found $COUNT JSON-LD blocks in $POST (expected 1)"
+          exit 1
+        fi
+        echo "single JSON-LD block found"
+
+    - name: Check no-comments-found hidden by default
+      run: |
+        grep -q '#no-comments-found' _site/assets/main.css
+        echo "no-comments-found CSS rule found"
+
+    - name: Check comment avatars have alt text
+      run: |
+        grep -q "avatar" _site/assets/js/comments.js
+        grep -q "setAttribute.*alt" _site/assets/js/comments.js
+        echo "avatar alt text found"
+
+    - name: Check subscribe forms have accessible labels
+      run: |
+        grep -q 'aria-label="Email address"' _site/index.html
+        POST=$(find _site/blog/20* -name 'index.html' | tail -1)
+        grep -q 'aria-label="Email address"' "$POST"
+        echo "subscribe form labels found"
+
   markdown-lint:
     runs-on: ubuntu-latest
 
