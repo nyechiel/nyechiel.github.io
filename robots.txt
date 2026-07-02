@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-Disallow: /assets/
+Disallow: /assets/images/
 Disallow: /redirects.json
 
 Sitemap: https://nyechiel.com/sitemap.xml
