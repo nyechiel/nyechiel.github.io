@@ -166,3 +166,29 @@ jobs:
         grep -q 'data-search-url=' _site/index.html
         grep -q 'data-search-url=' _site/search/index.html
         echo "data attributes found"
+
+    - name: Check Content-Security-Policy header
+      run: |
+        grep -q 'Content-Security-Policy' _site/index.html
+        echo "CSP meta tag found"
+
+    - name: Check X-Content-Type-Options header
+      run: |
+        grep -q 'X-Content-Type-Options' _site/index.html
+        echo "X-Content-Type-Options meta tag found"
+
+    - name: Check Referrer-Policy header
+      run: |
+        grep -q 'Referrer-Policy' _site/index.html
+        echo "Referrer-Policy meta tag found"
+
+    - name: Check 404 page has navigation links
+      run: |
+        grep -q 'href="/blog/"' _site/404/index.html
+        grep -q 'href="/search/"' _site/404/index.html
+        echo "404 page has navigation links"
+
+    - name: Check URL validator rejects path traversal
+      run: |
+        grep -q "\.\." _site/assets/js/comments.js
+        echo "path traversal check present in URL validator"

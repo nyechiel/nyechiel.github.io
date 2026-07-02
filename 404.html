@@ -16,11 +16,25 @@ sitemap:
     line-height: 1;
     letter-spacing: -1px;
   }
+  .error-links {
+    list-style: none;
+    padding: 0;
+    margin: 24px 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+  }
 </style>
 
 <div class="container">
   <h1>404</h1>
 
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
+  <p><strong>Page not found</strong></p>
+  <p>The page you're looking for doesn't exist or has been moved.</p>
+
+  <ul class="error-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/blog/">Blog</a></li>
+    <li><a href="/search/">Search</a></li>
+  </ul>
 </div>

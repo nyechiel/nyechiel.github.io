@@ -10,10 +10,12 @@
   function isValidGitHubURL( url ) {
     try {
       var parsed = new URL( url );
-      return parsed.protocol === 'https:' &&
-             (parsed.hostname === 'github.com' ||
-              parsed.hostname === 'api.github.com' ||
-              parsed.hostname === 'avatars.githubusercontent.com');
+      if ( parsed.protocol !== 'https:' ) return false;
+      if ( parsed.hostname !== 'github.com' &&
+           parsed.hostname !== 'api.github.com' &&
+           parsed.hostname !== 'avatars.githubusercontent.com' ) return false;
+      if ( parsed.pathname.indexOf( '..' ) !== -1 ) return false;
+      return true;
     } catch (e) {
       return false;
     }
