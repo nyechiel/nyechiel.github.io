@@ -14,7 +14,7 @@ comments_id: 141
 permalink: "/blog/2026/07/02/the-bottleneck-moved/"
 image:
   path: /assets/images/blog/the-bottleneck-moved.jpg
-  alt: "A computer chip with the letter A on top of it, representing AI"
+  alt: "A computer chip with AI engraved on it"
 ---
 
 A few weeks into my current role, I had a spec ready for a UI change - twelve string replacements across seven files, with a clear naming principle and an explicit list of what to change and what to leave alone. The engineer picked it up, and it was merged and running in pre-production in under two hours.
