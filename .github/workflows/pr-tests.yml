@@ -81,3 +81,47 @@ jobs:
 
     - name: Run bundle audit
       run: bundler-audit check
+
+  site-checks:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@9eb537ca036ebaed86729dcb9309076e4c5c3b74 # v1
+      with:
+        ruby-version-file: '.ruby-version'
+        bundler-cache: true
+
+    - name: Build Jekyll site
+      run: bundle exec jekyll build
+      env:
+        JEKYLL_ENV: production
+
+    - name: Check external JS files exist
+      run: |
+        test -f _site/assets/js/nav-search.js
+        test -f _site/assets/js/comments.js
+        test -f _site/assets/js/search.js
+        test -f _site/assets/js/tags.js
+        echo "all external JS files found"
+
+    - name: Check no inline script blocks in templates
+      run: |
+        # Index page: only JSON-LD and external src scripts allowed
+        INLINE_COUNT=$(grep -c '<script>' _site/index.html || true)
+        # JSON-LD scripts are fine (type="application/ld+json")
+        JSONLD_COUNT=$(grep -c 'application/ld+json' _site/index.html || true)
+        if [ "$INLINE_COUNT" -gt "$JSONLD_COUNT" ]; then
+          echo "FAIL: found inline scripts beyond JSON-LD in index.html"
+          exit 1
+        fi
+        echo "no unexpected inline scripts"
+
+    - name: Check data attributes for Liquid values
+      run: |
+        grep -q 'data-search-url=' _site/index.html
+        grep -q 'data-search-url=' _site/search/index.html
+        echo "data attributes found"
