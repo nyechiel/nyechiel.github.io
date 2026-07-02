@@ -18,7 +18,7 @@ Outside of work, you'll find me running, on a yoga mat, or lost in music.
 <div class="featured-card">
   {% if featured.image %}
   <a href="{{ featured.url }}" class="featured-card__image-link">
-    <img src="{{ featured.image.path | default: featured.image }}" alt="{{ featured.image.alt | default: featured.title }}" class="featured-card__image" />
+    <img src="{{ featured.image.path | default: featured.image }}" alt="{{ featured.image.alt | default: featured.title }}" class="featured-card__image" loading="lazy" />
   </a>
   {% endif %}
   <div class="featured-card__body">
