@@ -115,3 +115,30 @@ jobs:
           exit 1
         fi
         echo "PASS: No trailing spaces in filenames"
+
+    - name: Check skip-to-content link exists
+      run: |
+        grep -q 'class="skip-link"' _site/index.html
+        grep -q 'id="main-content"' _site/index.html
+        echo "skip-to-content link found"
+
+    - name: Check aria-label on hamburger menu
+      run: |
+        grep -q 'aria-label="Menu"' _site/index.html
+        echo "hamburger aria-label found"
+
+    - name: Check aria-label on nav search input
+      run: |
+        grep -q 'aria-label="Search posts"' _site/index.html
+        echo "search input aria-label found"
+
+    - name: Check aria-live on search results
+      run: |
+        grep -q 'aria-live="polite"' _site/index.html
+        grep -q 'aria-live="polite"' _site/search/index.html
+        echo "aria-live regions found"
+
+    - name: Check lazy loading on images
+      run: |
+        grep -q 'loading="lazy"' _site/index.html
+        echo "lazy loading found on homepage"
