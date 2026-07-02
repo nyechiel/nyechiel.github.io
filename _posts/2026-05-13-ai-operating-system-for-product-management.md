@@ -16,6 +16,9 @@ image:
   path: /assets/images/blog/ai-operating-system-for-product-management.jpg
   alt: "A computer circuit board with a glowing brain pattern"
 ---
+> **Update:** Since this post was published, I open-sourced the system as a [template repo](https://github.com/nyechiel/ai-augmented-workflow) you can fork and adapt. See [Build Your Own AI-Augmented Workflow](https://nyechiel.com/blog/2026/06/14/build-your-own-ai-augmented-workflow/) for the walkthrough.
+{: style="font-size: 0.92em"}
+
 I recently moved back into PM after more than six years in engineering leadership - a transition that probably deserves its own post someday. I currently work as a Senior Principal Product Manager at Red Hat with a strong technical focus, building agentic AI systems that transform how teams across the business work.
 
 But this post is about something else. Over the past few weeks I've been building a personal AI system that handles the operational side of my job. This space is evolving fast, and what I describe here will probably look different in a few months, but I wanted to capture where I am in this journey and share what's working.
