@@ -1,0 +1,39 @@
+---
+layout: default
+---
+<article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title | escape }}</h1>
+    <p class="post-meta">
+      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+      <time datetime="{{ page.date | date_to_xmlschema }}">
+        {{ page.date | date: date_format }}
+      </time>
+      {%- if page.last_updated -%}
+        &nbsp;&middot;&nbsp; Updated
+        <time datetime="{{ page.last_updated | date_to_xmlschema }}">
+          {{ page.last_updated | date: date_format }}
+        </time>
+      {%- endif -%}
+    </p>
+    {%- if page.tags.size > 0 -%}
+      <ul class="post-tags">
+        {%- for tag in page.tags -%}
+          <li><a class="post-tag post-tag--link" href="{{ "/tags/" | relative_url }}#{{ tag | slugify }}">{{ tag | escape }}</a></li>
+        {%- endfor -%}
+      </ul>
+    {%- endif -%}
+  </header>
+
+  <div class="note-context">
+    This is a <a href="{{ "/notes/" | relative_url }}">working note</a> - shorter and less polished than a blog post, and may evolve over time.
+  </div>
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  <p class="note-back"><a href="{{ "/notes/" | relative_url }}">&larr; All Notes</a></p>
+
+</article>

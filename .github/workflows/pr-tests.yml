@@ -72,7 +72,7 @@ jobs:
 
     - name: Check aria-label on nav search input
       run: |
-        grep -q 'aria-label="Search posts"' _site/index.html
+        grep -q 'aria-label="Search posts and notes"' _site/index.html
         echo "search input aria-label found"
 
     - name: Check aria-live on search results
@@ -85,6 +85,37 @@ jobs:
       run: |
         grep -q 'loading="lazy"' _site/index.html
         echo "lazy loading found on homepage"
+
+    - name: Check notes index page exists
+      run: |
+        test -f _site/notes/index.html
+        grep -q 'note-disclaimer' _site/notes/index.html
+        echo "notes index page found with disclaimer"
+
+    - name: Check notes excluded from RSS feed
+      run: |
+        if grep -q '/notes/' _site/feed.xml; then
+          echo "FAIL: notes URLs found in RSS feed"
+          exit 1
+        fi
+        echo "notes correctly excluded from feed"
+
+    - name: Check note layout exists
+      run: |
+        test -f _layouts/note.html
+        grep -q 'note-context' _layouts/note.html
+        echo "note layout found"
+
+    - name: Check search.json includes type field
+      run: |
+        python3 -c "
+        import json
+        with open('_site/search.json') as f:
+            data = json.load(f)
+        for item in data:
+            assert 'type' in item, f'Missing type field in: {item.get(\"title\", \"unknown\")}'
+        print(f'All {len(data)} search entries have type field')
+        "
 
     - name: Check external JS files exist
       run: |

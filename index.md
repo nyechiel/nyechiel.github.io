@@ -50,6 +50,22 @@ Outside of work, you'll find me running, on a yoga mat, or lost in music.
 
 [View All Posts →](/blog/)
 
+{% assign recent_notes = site.notes | sort: "date" | reverse %}
+{% if recent_notes.size > 0 %}
+## Latest Notes
+
+{% for note in recent_notes limit:3 %}
+<small>{{ note.date | date: "%B %-d, %Y" }}</small>
+
+**[{{ note.title }}]({{ note.url }})**
+
+{% if note.description %}{{ note.description }}{% endif %}
+
+{% endfor %}
+
+[View All Notes →](/notes/)
+{% endif %}
+
 <div class="subscribe-card">
   <p class="subscribe-card__text">Like what you're reading? Get new posts straight to your inbox.</p>
   <form class="subscribe-card__form" action="https://api.follow.it/subscription-form/clBXWVBSbWJyanNERlN2VVRGTUNNdU1uSTF3b1hLRTBGcStIa282RFpaWEVpOVNuOXhieituSC9mVENiTUYzYmRXK25PVVRJM2ZGd3Z0NGVuc0N2R1gxa1lOK1A2S1FrRTEzVXhkZjBvb0xhN2d4L2QxOHpiZ0l1N3V3NmZyRmV8RDY2VzhJN1NzSTJsUyt4L0xTYlJiSkgvUnV6QVdjWjBTem9PQXRFNjBlYz0=/8" method="post">

@@ -28,9 +28,22 @@ show_excerpts: true
 header_pages:
   - index.md
   - blog/index.md
+  - notes/index.html
   - tags.html
   - podcasts.md
   - about.md
+
+collections:
+  notes:
+    output: true
+    permalink: /notes/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: "notes"
+    values:
+      layout: "note"
 twitter_username: nyechiel
 github_username: nyechiel
 linkedin_username: nyechiel

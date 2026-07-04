@@ -9,7 +9,7 @@ sitemap:
 
 Nir started in computer networking (Cisco, Red Hat), moved to product management for OpenStack and OpenShift, spent time at Facebook/Meta on connectivity infrastructure, then returned to Red Hat in engineering management leading OpenShift networking teams (Submariner, Service Mesh, Gateway API, Service Interconnect). In 2026 he transitioned back to product management, focused on AI.
 
-The blog reflects this journey: early posts are deep technical content on networking and OpenStack, middle posts cover career transitions and leadership, and recent posts focus on AI-augmented product management workflows.
+The blog reflects this journey: early posts are deep technical content on networking and OpenStack, middle posts cover career transitions and leadership, and recent posts focus on AI-augmented product management workflows. The site also includes a Notes section with shorter, less polished working notes on product thinking, frameworks, and ideas.
 
 ## AI and Product Management
 {% assign ai_posts = site.posts | where_exp: "post", "post.tags contains 'AI'" %}
@@ -29,9 +29,18 @@ The blog reflects this journey: early posts are deep technical content on networ
 - [{{ post.title }}]({{ site.url }}{{ post.url }}): {{ post.excerpt | strip_html | strip_newlines | truncatewords: 30 }}
 {%- endfor %}
 
+{%- if site.notes.size > 0 %}
+
+## Notes
+{% for note in site.notes %}
+- [{{ note.title }}]({{ site.url }}{{ note.url }}): {{ note.description | default: note.content | strip_html | strip_newlines | truncatewords: 30 }}
+{%- endfor %}
+{%- endif %}
+
 ## Pages
 
 - [About]({{ site.url }}/about/): Author bio, career background, and site information.
 - [Blog Archive]({{ site.url }}/blog/): Full list of all blog posts.
-- [Tags]({{ site.url }}/tags/): Browse posts by topic tag.
+- [Notes]({{ site.url }}/notes/): Working notes on product thinking, frameworks, and ideas.
+- [Tags]({{ site.url }}/tags/): Browse posts and notes by topic tag.
 - [Podcasts]({{ site.url }}/podcasts/): Podcast episodes featuring Nir Yechiel.
