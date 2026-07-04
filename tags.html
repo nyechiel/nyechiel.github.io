@@ -5,29 +5,70 @@ permalink: /tags/
 ---
 
 <div class="tags-page">
-  {%- assign sorted_tags = site.tags | sort -%}
+  {%- comment -%}Build a merged tag map from both posts and notes{%- endcomment -%}
+  {%- assign all_tags = "" | split: "" -%}
+  {%- for tag in site.tags -%}
+    {%- assign all_tags = all_tags | push: tag[0] -%}
+  {%- endfor -%}
+  {%- for note in site.notes -%}
+    {%- for tag in note.tags -%}
+      {%- unless all_tags contains tag -%}
+        {%- assign all_tags = all_tags | push: tag -%}
+      {%- endunless -%}
+    {%- endfor -%}
+  {%- endfor -%}
+  {%- assign all_tags = all_tags | sort_natural -%}
+
+  {%- comment -%}Tag cloud with combined counts{%- endcomment -%}
   <div class="tags-cloud">
     <a class="post-tag post-tag--link post-tag--all" href="#" data-show-all>All</a>
-    {%- for tag in sorted_tags -%}
-      <a class="post-tag post-tag--link" href="#{{ tag[0] | slugify }}">{{ tag[0] | escape }} <span class="tag-count">{{ tag[1].size }}</span></a>
+    {%- for tag_name in all_tags -%}
+      {%- assign post_count = site.tags[tag_name] | size | default: 0 -%}
+      {%- assign note_count = 0 -%}
+      {%- for note in site.notes -%}
+        {%- if note.tags contains tag_name -%}
+          {%- assign note_count = note_count | plus: 1 -%}
+        {%- endif -%}
+      {%- endfor -%}
+      {%- assign total_count = post_count | plus: note_count -%}
+      <a class="post-tag post-tag--link" href="#{{ tag_name | slugify }}">{{ tag_name | escape }} <span class="tag-count">{{ total_count }}</span></a>
     {%- endfor -%}
   </div>
 
-  {%- for tag in sorted_tags -%}
-    <div class="tag-group" id="{{ tag[0] | slugify }}">
-      <h2 class="tag-group-heading">{{ tag[0] | escape }}</h2>
+  {%- comment -%}Tag groups with posts and notes merged{%- endcomment -%}
+  {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+  {%- for tag_name in all_tags -%}
+    {%- assign tagged_posts = "" | split: "" -%}
+    {%- if site.tags[tag_name] -%}
+      {%- assign tagged_posts = site.tags[tag_name] -%}
+    {%- endif -%}
+    {%- assign tagged_notes = "" | split: "" -%}
+    {%- for note in site.notes -%}
+      {%- if note.tags contains tag_name -%}
+        {%- assign tagged_notes = tagged_notes | push: note -%}
+      {%- endif -%}
+    {%- endfor -%}
+    {%- assign has_posts = tagged_posts | size -%}
+    {%- assign has_notes = tagged_notes | size -%}
+    {%- if has_posts > 0 or has_notes > 0 -%}
+    <div class="tag-group" id="{{ tag_name | slugify }}">
+      <h2 class="tag-group-heading">{{ tag_name | escape }}</h2>
+      {%- assign all_tagged = tagged_posts | concat: tagged_notes | sort: "date" | reverse -%}
       <ul class="post-list">
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        {%- for post in tag[1] -%}
+        {%- for item in all_tagged -%}
           <li>
-            <span class="post-meta">{{ post.date | date: date_format }}</span>
+            <span class="post-meta">{{ item.date | date: date_format }}</span>
             <h3>
-              <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+              <a class="post-link" href="{{ item.url | relative_url }}">{{ item.title | escape }}</a>
+              {%- if item.collection == "notes" -%}
+                <span class="note-badge">Note</span>
+              {%- endif -%}
             </h3>
           </li>
         {%- endfor -%}
       </ul>
     </div>
+    {%- endif -%}
   {%- endfor -%}
 </div>
 

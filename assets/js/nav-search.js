@@ -91,9 +91,14 @@
     var html = '';
     for (var i = 0; i < max; i++) {
       var p = scored[i].post;
+      var typeLabel = p.type === 'note' ? 'Note' : 'Blog';
+      var typeClass = p.type === 'note' ? 'nav-search__item-type--note' : 'nav-search__item-type--post';
       html += '<a class="nav-search__item" href="' + esc(p.url) + '">';
       html += '<span class="nav-search__item-title">' + esc(p.title) + '</span>';
+      html += '<span class="nav-search__item-meta">';
+      html += '<span class="nav-search__item-type ' + typeClass + '">' + typeLabel + '</span>';
       html += '<span class="nav-search__item-date">' + esc(p.date) + '</span>';
+      html += '</span>';
       html += '</a>';
     }
     if (scored.length > max) {

@@ -23,6 +23,7 @@
             {%- assign is_active = false -%}
             {%- if page.url == my_page.url -%}{%- assign is_active = true -%}{%- endif -%}
             {%- if my_page.url == "/blog/" and page.layout == "post" -%}{%- assign is_active = true -%}{%- endif -%}
+            {%- if my_page.url == "/notes/" and page.layout == "note" -%}{%- assign is_active = true -%}{%- endif -%}
             <a class="page-link{% if is_active %} page-link--active{% endif %}" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
             {%- endif -%}
           {%- endfor -%}
@@ -30,7 +31,7 @@
             <button type="button" class="nav-search__toggle" id="nav-search-toggle" aria-label="Search">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
             </button>
-            <input type="text" id="nav-search-input" class="nav-search__input" placeholder="Search posts..." autocomplete="off" aria-label="Search posts">
+            <input type="text" id="nav-search-input" class="nav-search__input" placeholder="Search..." autocomplete="off" aria-label="Search posts and notes">
             <div id="nav-search-results" class="nav-search__results" aria-live="polite"></div>
           </span>
         </div>

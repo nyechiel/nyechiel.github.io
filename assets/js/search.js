@@ -80,7 +80,7 @@
 
     if (scored.length === 0) {
       resultsEl.innerHTML = '';
-      statusEl.innerHTML = '<p class="search-message">No posts found for "' + escapeHtml(input.value.trim()) + '"</p>';
+      statusEl.innerHTML = '<p class="search-message">No results found for "' + escapeHtml(input.value.trim()) + '"</p>';
       return;
     }
 
@@ -93,9 +93,11 @@
       if (excerpt.length > 200) {
         excerpt = excerpt.substring(0, 200) + '...';
       }
+      var typeLabel = post.type === 'note' ? 'Note' : 'Blog';
+      var badgeClass = post.type === 'note' ? 'note-badge' : 'post-type-badge';
       html += '<li>';
       html += '<span class="post-meta">' + escapeHtml(post.date) + '</span>';
-      html += '<h3><a class="post-link" href="' + escapeHtml(post.url) + '">' + escapeHtml(post.title) + '</a></h3>';
+      html += '<h3><a class="post-link" href="' + escapeHtml(post.url) + '">' + escapeHtml(post.title) + '</a> <span class="' + badgeClass + '">' + typeLabel + '</span></h3>';
       html += '<p>' + escapeHtml(excerpt) + '</p>';
       html += '</li>';
     }
