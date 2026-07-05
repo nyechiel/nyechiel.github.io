@@ -103,7 +103,7 @@ jobs:
     - name: Check note layout exists
       run: |
         test -f _layouts/note.html
-        grep -q 'note-context' _layouts/note.html
+        grep -q 'post-content' _layouts/note.html
         echo "note layout found"
 
     - name: Check search.json includes type field
