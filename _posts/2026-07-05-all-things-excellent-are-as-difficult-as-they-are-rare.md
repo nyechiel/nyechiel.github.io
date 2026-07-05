@@ -24,7 +24,7 @@ I keep coming back to this line as I watch the AI conversation unfold. Not becau
 
 There's a growing argument that we're not in an AI revolution comparable to the Industrial Revolution. We're in something more like the Middle Ages - a transitional period where a powerful new capability exists, but we haven't figured out our relationship with it yet.
 
-Will Rinehart [makes this case](https://exformation.williamrinehart.com/p/the-phenomenology-of-getting-agi) in an essay for AEI. In the medieval period, creative production was "a negotiation between patron and maker, oriented toward something transcendent. The Sistine Chapel happened because Julius II and Michelangelo fought. Work emerged from friction, not selection." AI, he argues, is flipping this relationship again - but toward effortless selection from infinite options.
+Will Rinehart [makes this case](https://exformation.williamrinehart.com/p/the-phenomenology-of-getting-agi) in a recent essay. In the medieval period, creative production was "a negotiation between patron and maker, oriented toward something transcendent. The Sistine Chapel happened because Julius II and Michelangelo fought. Work emerged from friction, not selection." AI, he argues, is flipping this relationship again - but toward effortless selection from infinite options.
 
 We have enormous productive capacity. What we lack is the cultural and philosophical framework to use it well. That's what makes it a Middle Ages, not an Industrial Revolution. The technology isn't the bottleneck. The meaning is.
 
@@ -44,7 +44,9 @@ When AI models train on AI-generated content - which is increasingly unavoidable
 
 The connection to Spinoza is hard to miss. Model collapse eliminates exactly what Spinoza says defines excellence: the difficult and the rare. What survives repeated AI-on-AI training is the easy and the common. The median. The safe answer. The thing that, by Spinoza's definition, cannot be excellent.
 
-And it's not just a technical problem. If the next generation of humans grows up surrounded by AI-generated content - and [some estimates put AI-generated text at over 50% of everything online](https://aitrendsonline.com/posts/the-risk-of-model-collapse-consequences-of-training-ai-on-ai-generated-content/) - the inspiration chain breaks. Not because AI content is necessarily bad, but because it lacks the human struggle that makes prior work *inspiring*. You don't look at an AI-generated essay and think: someone poured years into understanding this deeply enough to write it. The friction is absent. And without friction, there's nothing to push against.
+And it's not just a technical problem. If the next generation of humans grows up surrounded by AI-generated content - and [some studies suggest AI-generated text already accounts for roughly half of new articles on the web](https://www.eweek.com/news/ai-writes-half-internet/) - the inspiration chain breaks. Not because AI content is necessarily bad, but because it lacks the human struggle that makes prior work *inspiring*. You don't look at an AI-generated essay and think: someone poured years into understanding this deeply enough to write it. The friction is absent. And without friction, there's nothing to push against.
+
+The [Oxford Institute for Ethics in AI](https://www.oxford-aiethics.ox.ac.uk/ai-threat-human-creativity) adds an economic layer to this: creative AI won't make human creativity irrelevant - there's always room for more creativity. But it will make it harder and harder to make a living as a professional creative. And that starves the pipeline of human-made work that future humans - and future AI models - need to learn from.
 
 ## Difficulty as a feature, not a bug
 
@@ -52,14 +54,12 @@ The optimists point to historical parallels. Photography didn't kill painting - 
 
 This is probably right, as far as it goes. But it misses Spinoza's deeper point. He's not saying difficult things are *better*. He's saying excellence and difficulty are *the same thing*. The difficulty isn't an obstacle to be overcome on the way to the excellent result. The difficulty is what makes the result excellent. Remove it, and you haven't streamlined the path to excellence - you've eliminated the conditions under which excellence can exist.
 
-The [Oxford Institute for Ethics in AI](https://www.oxford-aiethics.ox.ac.uk/ai-threat-human-creativity) frames the practical version: creative AI won't make human creativity irrelevant - there's always room for more creativity. But it will make it economically unsustainable to be a professional creative. And that starves the pipeline of human-made work that future humans - and future AI models - need.
-
 ## What's actually at stake
 
 I don't think this is an argument against using AI. I use it extensively in my daily work. The question is more specific: can we preserve the conditions for excellence in a world optimized for abundance?
 
 The Renaissance didn't happen because people had easy access to Greek texts. It happened because rediscovering those texts was hard enough to filter for people who cared deeply. The difficulty was the selection mechanism for seriousness. When everything is available instantly and effortlessly, that selection mechanism disappears.
 
-Spinoza was a lens grinder by trade - a craftsman who understood that precision comes from patient, skilled labor. He wrote the *Ethics* over years of careful thought, published it posthumously because the ideas were too dangerous for his lifetime. The book itself is a living proof of its final line: excellent, difficult, rare.
+Spinoza was a lens grinder by trade - a craftsman who understood that precision comes from patient, skilled labor. He wrote the *Ethics* over years of careful thought, and it was only published after his death because the ideas were too dangerous for his lifetime. The book itself is a living proof of its final line: excellent, difficult, rare.
 
 The challenge for our AI Middle Ages is to figure out what comes next. Not to reject the technology, but to build the cultural and philosophical frameworks that ensure difficulty and rarity still have a place. Because if Spinoza is right, and I think he is, the alternative isn't a world with more excellence. It's a world with none.
