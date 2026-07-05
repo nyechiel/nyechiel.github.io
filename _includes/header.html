@@ -54,7 +54,7 @@
   document.querySelectorAll('.site-nav .page-link').forEach(function(a){
     a.addEventListener('click',close);
   });
-  window.addEventListener('pageshow',function(){close()});
+  window.addEventListener('pageshow',function(e){close();if(e.persisted)setTimeout(close,0)});
 })();
 </script>
 <script src="{{ '/assets/js/nav-search.js' | relative_url }}"></script>
