@@ -46,7 +46,7 @@ The connection to Spinoza is hard to miss. Model collapse eliminates exactly wha
 
 And it's not just a technical problem. If the next generation of humans grows up surrounded by AI-generated content - and [some studies suggest AI-generated text already accounts for roughly half of new articles on the web](https://www.eweek.com/news/ai-writes-half-internet/) - the inspiration chain breaks. Not because AI content is necessarily bad, but because it lacks the human struggle that makes prior work *inspiring*. You don't look at an AI-generated essay and think: someone poured years into understanding this deeply enough to write it. The friction is absent. And without friction, there's nothing to push against.
 
-The [Oxford Institute for Ethics in AI](https://www.oxford-aiethics.ox.ac.uk/ai-threat-human-creativity) adds an economic layer to this: creative AI won't make human creativity irrelevant - there's always room for more creativity. But it will make it harder and harder to make a living as a professional creative. And that starves the pipeline of human-made work that future humans - and future AI models - need to learn from.
+And the economics make it worse. If AI can produce good-enough content at near-zero cost, fewer people will be able to make a living creating things. Fewer professional creators means less human-made work for the next generation to be inspired by - and less human data for future AI models to learn from.
 
 ## Difficulty as a feature, not a bug
 
