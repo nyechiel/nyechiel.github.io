@@ -943,16 +943,7 @@ hr {
 // ————————————————————————————————————
 
 @include media-query($on-palm) {
-  // Neutralize minima's checkbox hack - browser back-navigation restores
-  // checkbox state, which makes the menu appear via input:checked ~ .trigger.
-  // This rule has the same specificity (0,3,1) and wins by source order.
-  .site-nav input:checked ~ .trigger {
-    display: none;
-  }
-
-  // JS-controlled class shows the menu. The input~ combinator matches
-  // specificity with the rule above so this wins by source order when both apply.
-  .site-nav.nav-open input ~ .trigger {
+  .site-nav.nav-open .trigger {
     display: block;
     padding-bottom: 5px;
   }
