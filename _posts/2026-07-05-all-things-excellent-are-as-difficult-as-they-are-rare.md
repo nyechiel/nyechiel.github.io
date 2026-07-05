@@ -34,7 +34,7 @@ The [Renaissance](https://en.wikipedia.org/wiki/Renaissance) worked because huma
 
 This is the "human inspires human" chain. It's not just about influence in the artistic sense. It's about recognizing difficulty in someone else's work and feeling compelled to match it. You read a passage that clearly cost the author something, and it pushes you to try harder. You see a proof that took decades of failed attempts, and it shapes your sense of what's worth pursuing.
 
-Zack Kass, former head of Go To Market at OpenAI, [wrote a book](https://www.mckinsey.com/featured-insights/mckinsey-on-books/author-talks-how-ai-could-redefine-progress-and-potential) called *The Next Renaissance*, framing AI as the catalyst for a new golden age of human potential. But even he identifies the core risk: what we face is "an identity displacement crisis, not a job displacement crisis." The question isn't whether AI takes our jobs. It's whether it takes the things that make us feel like our work matters.
+Zack Kass, formerly of OpenAI, [wrote a book](https://www.mckinsey.com/featured-insights/mckinsey-on-books/author-talks-how-ai-could-redefine-progress-and-potential) called *The Next Renaissance*, framing AI as the catalyst for a new golden age of human potential. But even he identifies the core risk: what we face is "an identity displacement crisis, not a job displacement crisis." The question isn't whether AI takes our jobs. It's whether it takes the things that make us feel like our work matters.
 
 ## Habsburg AI
 
