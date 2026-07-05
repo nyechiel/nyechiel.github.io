@@ -43,8 +43,9 @@
 <script>
 (function(){
   var nav=document.querySelector('.site-nav');
+  var cb=document.getElementById('nav-trigger');
   var label=document.querySelector('label[for="nav-trigger"]');
-  function close(){nav.classList.remove('nav-open');label.setAttribute('aria-expanded','false')}
+  function close(){cb.checked=false;nav.classList.remove('nav-open');label.setAttribute('aria-expanded','false')}
   label.addEventListener('click',function(e){
     e.preventDefault();
     var open=nav.classList.toggle('nav-open');
