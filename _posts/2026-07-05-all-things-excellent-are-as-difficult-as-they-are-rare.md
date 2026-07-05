@@ -6,7 +6,8 @@ categories:
 - Blog
 tags:
 - AI
-- Productivity
+- Philosophy
+- Creativity
 description: "What Spinoza, the Renaissance, and model collapse tell us about excellence in an age of effortless AI-generated content."
 comments_id: 164
 permalink: "/blog/2026/07/05/all-things-excellent-are-as-difficult-as-they-are-rare/"
@@ -15,7 +16,7 @@ image:
   alt: "Portrait of Baruch Spinoza, circa 1665, oil painting by an anonymous artist"
 ---
 
-Spinoza ends his *Ethics* - one of the most demanding works in the history of philosophy - with a single sentence: *"Sed omnia praeclara tam difficilia quam rara sunt."* All things excellent are as difficult as they are rare.
+[Spinoza](https://en.wikipedia.org/wiki/Baruch_Spinoza) ends his *Ethics* - one of the most demanding works in the history of philosophy - with a single sentence: *"Sed omnia praeclara tam difficilia quam rara sunt."* All things excellent are as difficult as they are rare.
 
 I keep coming back to this line as I watch the AI conversation unfold. Not because it's a clean argument against AI. It isn't. But because it names something we're losing sight of in the rush toward effortless generation: excellence has conditions, and we're quietly removing them.
 
