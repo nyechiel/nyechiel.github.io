@@ -42,11 +42,14 @@
 
 <script>
 (function(){
+  var nav=document.querySelector('.site-nav');
   var cb=document.getElementById('nav-trigger');
-  document.querySelectorAll('.site-nav .page-link').forEach(function(a){
-    a.addEventListener('click',function(){cb.checked=false});
+  cb.addEventListener('change',function(){
+    nav.classList.toggle('nav-open',cb.checked);
   });
-  window.addEventListener('pageshow',function(){setTimeout(function(){cb.checked=false},0)});
+  document.querySelectorAll('.site-nav .page-link').forEach(function(a){
+    a.addEventListener('click',function(){nav.classList.remove('nav-open');cb.checked=false});
+  });
 })();
 </script>
 <script src="{{ '/assets/js/nav-search.js' | relative_url }}"></script>
