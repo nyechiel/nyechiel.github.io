@@ -30,7 +30,7 @@ We have enormous productive capacity. What we lack is the cultural and philosoph
 
 ## The inspiration chain
 
-The Renaissance worked because humans looked backward before they leaped forward. Scholars rediscovered Aristotle, architects studied Roman ruins, artists revisited Greek proportions. The achievements they found were clearly human - products of struggle, craft, and intention. And those achievements *inspired* people to go further.
+The [Renaissance](https://en.wikipedia.org/wiki/Renaissance) worked because humans looked backward before they leaped forward. Scholars rediscovered Aristotle, architects studied Roman ruins, artists revisited Greek proportions. The achievements they found were clearly human - products of struggle, craft, and intention. And those achievements *inspired* people to go further.
 
 This is the "human inspires human" chain. It's not just about influence in the artistic sense. It's about recognizing difficulty in someone else's work and feeling compelled to match it. You read a passage that clearly cost the author something, and it pushes you to try harder. You see a proof that took decades of failed attempts, and it shapes your sense of what's worth pursuing.
 
