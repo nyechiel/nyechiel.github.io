@@ -62,4 +62,4 @@ The Renaissance didn't happen because people had easy access to Greek texts. It 
 
 Spinoza was a lens grinder by trade - a craftsman who understood that precision comes from patient, skilled labor. He wrote the *Ethics* over years of careful thought, and it was only published after his death because the ideas were too dangerous for his lifetime. The book itself is a living proof of its final line: excellent, difficult, rare.
 
-The challenge for our AI Middle Ages is to figure out what comes next. Not to reject the technology, but to build the cultural and philosophical frameworks that ensure difficulty and rarity still have a place. Because if Spinoza is right, and I think he is, the alternative isn't a world with more excellence. It's a world with none.
+The challenge for our AI Middle Ages is to figure out what comes next. Not to reject the technology, but to build the cultural and philosophical frameworks that ensure difficulty and rarity still have a place. Because if Spinoza is right, and I think he is, removing difficulty doesn't make excellence easier to reach. It makes it harder to find.
