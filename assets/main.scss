@@ -943,6 +943,15 @@ hr {
 // ————————————————————————————————————
 
 @include media-query($on-palm) {
+  .site-nav input:checked ~ .trigger {
+    display: none;
+  }
+
+  .site-nav.nav-open .trigger {
+    display: block;
+    padding-bottom: 5px;
+  }
+
   body {
     font-size: 16px;
   }
