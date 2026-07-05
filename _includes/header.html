@@ -40,5 +40,13 @@
   </div>
 </header>
 
-<script>window.addEventListener('pageshow',function(){document.getElementById('nav-trigger').checked=false});</script>
+<script>
+(function(){
+  var cb=document.getElementById('nav-trigger');
+  document.querySelectorAll('.site-nav .page-link').forEach(function(a){
+    a.addEventListener('click',function(){cb.checked=false});
+  });
+  window.addEventListener('pageshow',function(){setTimeout(function(){cb.checked=false},0)});
+})();
+</script>
 <script src="{{ '/assets/js/nav-search.js' | relative_url }}"></script>
