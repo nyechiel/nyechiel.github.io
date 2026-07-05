@@ -43,12 +43,13 @@
 <script>
 (function(){
   var nav=document.querySelector('.site-nav');
-  var cb=document.getElementById('nav-trigger');
-  cb.addEventListener('change',function(){
-    nav.classList.toggle('nav-open',cb.checked);
+  var label=document.querySelector('label[for="nav-trigger"]');
+  label.addEventListener('click',function(e){
+    e.preventDefault();
+    nav.classList.toggle('nav-open');
   });
   document.querySelectorAll('.site-nav .page-link').forEach(function(a){
-    a.addEventListener('click',function(){nav.classList.remove('nav-open');cb.checked=false});
+    a.addEventListener('click',function(){nav.classList.remove('nav-open')});
   });
 })();
 </script>
