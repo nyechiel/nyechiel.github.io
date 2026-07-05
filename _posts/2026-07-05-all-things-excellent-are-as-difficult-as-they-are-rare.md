@@ -56,7 +56,7 @@ This is probably right, as far as it goes. But it misses Spinoza's deeper point.
 
 ## What's actually at stake
 
-I don't think this is an argument against using AI. I use it extensively in my daily work. The question is more specific: can we preserve the conditions for excellence in a world optimized for abundance?
+I don't think this is an argument against using AI. I use it extensively in my daily work. The question is more specific: can we preserve the conditions for excellence in a world where everything is easy to produce?
 
 The Renaissance didn't happen because people had easy access to Greek texts. It happened because rediscovering those texts was hard enough to filter for people who cared deeply. The difficulty was the selection mechanism for seriousness. When everything is available instantly and effortlessly, that selection mechanism disappears.
 
